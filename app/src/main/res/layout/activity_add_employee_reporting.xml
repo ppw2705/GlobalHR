@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/activity_add__employee__reporting"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.geeconsystems.globalhr.UI.Add_Employee_Reporting">
+
+
+
+    <include
+        android:id="@+id/t2"
+        layout="@layout/toolbar"/>
+
+
+    <LinearLayout
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/t2"
+        >
+
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:id="@+id/empname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:backgroundTint="@color/black"
+            android:dropDownWidth="wrap_content"
+            android:spinnerMode="dropdown"
+            />
+
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:id="@+id/manager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:dropDownWidth="wrap_content"
+            android:spinnerMode="dropdown"
+            android:backgroundTint="@color/black"
+
+            />
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:id="@+id/managertype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:dropDownWidth="wrap_content"
+            android:spinnerMode="dropdown"
+            android:backgroundTint="@color/black"
+
+            />
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:id="@+id/reportingmode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:dropDownWidth="wrap_content"
+            android:spinnerMode="dropdown"
+            android:backgroundTint="@color/black"
+
+            />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lv"
+        android:layout_marginTop="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="200dp"
+                android:padding="20dp"
+                android:background="#1a1"
+                android:text="save"
+                android:textColor="#ffffff"
+
+                />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="200dp"
+                android:padding="20dp"
+                android:background="#9e9e9e"
+                android:text="cancel"
+                android:textColor="#ffffff"
+
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
