@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
+import com.geeconsystems.globalhr.R;
+
 public class punch_in_out extends AppCompatActivity {
     Toolbar toolbar;
     @Override
@@ -25,7 +27,7 @@ public class punch_in_out extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
 
-        getMenuInflater().inflate(R.menu.add,menu);
+     //   getMenuInflater().inflate(R.menu.add,menu);
         return super.onCreateOptionsMenu(menu);
     }
 }
