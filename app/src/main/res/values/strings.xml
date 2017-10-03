@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">GlobalHR</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Log In</string>
+    <string name="pio">Punch In-Out</string>
+    <string name="MAR">My Attendance Record</string>
+    <string name="AE">Attendance Employee</string>
+    <string name="AR">Attendance Register</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
 </resources>
