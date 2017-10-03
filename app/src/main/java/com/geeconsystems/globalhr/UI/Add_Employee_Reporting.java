@@ -22,6 +22,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.geeconsystems.globalhr.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +34,7 @@ public class Add_Employee_Reporting extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add__employee__reporting);
+        setContentView(R.layout.activity_add_employee_reporting);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Add Employee Reporting");
@@ -88,7 +90,7 @@ public class Add_Employee_Reporting extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Add_Employee_Reporting.this,Etimesheet.class));
+              //  startActivity(new Intent(Add_Employee_Reporting.this,Etimesheet.class));
             }
         });
 
@@ -97,7 +99,7 @@ public class Add_Employee_Reporting extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
 
-        getMenuInflater().inflate(R.menu.add, menu);
+     //   getMenuInflater().inflate(R.menu.add, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
