@@ -16,7 +16,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".UI.loginscreen" />
-        <activity android:name=".UI.Attendance"></activity>
+        <activity android:name=".UI.Attendance" />
+        <activity android:name=".UI.Add_salary_details" />
+        <activity android:name=".UI.My_employee_info" />
+        <activity android:name=".UI.EditTimesheet" />
+        <activity android:name=".UI.CreateLeaveRequest"></activity>
     </application>
 
 </manifest>
