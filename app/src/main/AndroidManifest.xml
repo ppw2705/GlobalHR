@@ -23,7 +23,9 @@
         <activity android:name=".UI.CreateLeaveRequest" />
         <activity android:name=".UI.Add_Employee_Reporting" />
         <activity android:name=".UI.Add_Job_Details" />
-        <activity android:name=".UI.punch_in_out"></activity>
+        <activity android:name=".UI.punch_in_out" />
+        <activity android:name=".UI.Etimesheet" />
+        <activity android:name=".UI.Employee_Info"></activity>
     </application>
 
 </manifest>
