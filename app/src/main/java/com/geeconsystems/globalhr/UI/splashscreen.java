@@ -10,11 +10,13 @@ import android.widget.ImageView;
 
 import com.geeconsystems.globalhr.R;
 
-public class splashscreen extends AppCompatActivity {
+public class splashscreen extends AppCompatActivity
+{
     private final static int splashtimmeout=3000;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+        protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
         ImageView i=(ImageView)findViewById(R.id.logo);
@@ -22,9 +24,11 @@ public class splashscreen extends AppCompatActivity {
         Animation animation= AnimationUtils.loadAnimation(this,R.anim.bounce);
         i.startAnimation(animation);
 
-        new Handler().postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable()
+        {
             @Override
-            public void run() {
+            public void run()
+            {
                 startActivity(new Intent(splashscreen.this,loginscreen.class));
                 finish();
             }
