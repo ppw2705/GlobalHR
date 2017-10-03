@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/notification"
+    android:title="Notification"
+    android:icon="@drawable/notification"
+    android:showAsAction="never"
+    />
+
+    <item
+        android:id="@+id/mainmenu"
+        android:title="main menu"
+        android:icon="@drawable/mm"
+        android:showAsAction="never"
+        />
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/settings"
+        android:showAsAction="never"
+        />
+
+</menu>
