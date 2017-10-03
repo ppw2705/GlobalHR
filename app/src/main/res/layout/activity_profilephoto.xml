@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_profilephoto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.geeconsystems.globalhr.UI.profilephoto">
+
+    <include
+        android:id="@+id/Tbr"
+        layout="@layout/toolbar"
+        />
+    <ImageView
+        android:id="@+id/blur1"
+        android:src="@drawable/black"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_below="@+id/Tbr"
+        android:layout_marginBottom="160dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="100dp"
+            android:src="@drawable/ppdimg"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ppbg"
+            />
+
+
+        <ImageView
+            android:layout_alignTop="@+id/profile"
+            android:layout_alignEnd="@+id/profile"
+            android:id="@+id/img_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/editcopy"
+            android:layout_marginTop="10dp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/Tbr"
+        android:layout_marginTop="400dp"
+        android:paddingTop="70dp"
+        >
+        <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/Camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/camera"
+                />
+            <TextView
+                android:id="@+id/camtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Camera"
+                android:textColor="#000000"
+                android:textAlignment="center"
+                android:layout_below="@+id/Camera"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/r2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/Gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gallery"
+                />
+            <TextView
+                android:id="@+id/galtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gallery"
+                android:textColor="#000000"
+                android:textAlignment="center"
+                android:layout_below="@+id/Gallery"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/r3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/Remove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/remove"
+                />
+            <TextView
+                android:id="@+id/remtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Remove"
+                android:textColor="#000000"
+                android:textAlignment="center"
+                android:layout_below="@+id/Remove"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>
