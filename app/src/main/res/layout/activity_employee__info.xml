@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_employee__info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.geeconsystems.globalhr.UI.Employee_Info">
+    <include
+        android:id="@+id/br1"
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/br1"
+        android:layout_marginTop="15dp"
+        >
+        <Button
+            android:id="@+id/nagendra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:drawableEnd="@drawable/arrow"
+            android:padding="5dp"
+            android:text="Nagendra Mishra"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:drawableStart="@drawable/contactm"
+            />
+
+        <Button
+            android:id="@+id/neha__pandey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:drawableEnd="@drawable/arrow"
+            android:padding="5dp"
+            android:text="Neha Pandey"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:drawableStart="@drawable/contactf"
+            />
+        <Button
+            android:id="@+id/sagardave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:drawableEnd="@drawable/arrow"
+            android:padding="5dp"
+            android:text="Sagar Dave"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:drawableStart="@drawable/contactm"
+            />
+        <Button
+            android:id="@+id/hardikprajapati"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:drawableEnd="@drawable/arrow"
+            android:padding="5dp"
+            android:text="Hardik Prajapati"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:drawableStart="@drawable/contactm"
+            />
+        <Button
+            android:id="@+id/surajtrivedi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:drawableEnd="@drawable/arrow"
+            android:padding="5dp"
+            android:text="Suraj Trivedi"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:drawableStart="@drawable/contactm"
+            />
+        <Button
+            android:id="@+id/pareshvadel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:drawableEnd="@drawable/arrow"
+            android:padding="5dp"
+            android:text="Paresh Vadel"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:drawableStart="@drawable/contactm"
+            />
+        <Button
+            android:id="@+id/chandandigari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:drawableEnd="@drawable/arrow"
+            android:padding="5dp"
+            android:text="Chandan Digari"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:drawableStart="@drawable/contactm"
+            />
+        <Button
+            android:id="@+id/sanalangathil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:drawableEnd="@drawable/arrow"
+            android:padding="5dp"
+            android:text="Sanal Angathil"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:drawableStart="@drawable/contactf"
+            />
+        <Button
+            android:id="@+id/shilpasoni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:drawableEnd="@drawable/arrow"
+            android:padding="5dp"
+            android:text="Shilpa Soni"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:drawableStart="@drawable/contactf"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

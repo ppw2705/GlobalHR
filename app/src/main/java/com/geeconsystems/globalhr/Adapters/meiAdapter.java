@@ -1,9 +1,13 @@
 package com.geeconsystems.globalhr.Adapters;
 
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.geeconsystems.globalhr.CustomCells.recycler_list;
+import com.geeconsystems.globalhr.R;
 
 import java.util.List;
 

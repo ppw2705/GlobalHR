@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_punch_in_out"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.geeconsystems.globalhr.UI.punch_in_out">
+
+    <include
+        android:id="@+id/tobar"
+        layout="@layout/toolbar"/>
+
+    <ImageView
+        android:id="@+id/punch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tobar"
+        android:src="@drawable/timebg"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tobar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="210dp"
+        android:text="Punch In"
+        android:textSize="42sp"
+        android:textColor="#ffffff"
+        />
+
+    <Button
+        android:id="@+id/cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/punch"
+        android:layout_centerHorizontal="true"
+        android:text="Mon,04 jul 2016"
+        android:background="#00000000"
+        android:textColor="#fb800b"
+        android:drawableStart="@drawable/date"
+        />
+
+
+
+</RelativeLayout>

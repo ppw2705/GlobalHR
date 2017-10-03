@@ -4,10 +4,104 @@
     android:id="@+id/activity_edit_timesheet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.geeconsystems.globalhr.UI.EditTimesheet">
+    <include
+        android:id="@+id/t2"
+        layout="@layout/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+    <LinearLayout
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/t2"
+        android:layout_marginTop="10dp"
+        >
 
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:id="@+id/timesheetperiod"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:dropDownWidth="wrap_content"
+            android:spinnerMode="dropdown"
+            />
+
+        <EditText
+            android:id="@+id/TestProject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Test Project"
+            android:drawableStart="@drawable/testproject"
+            />
+
+        <EditText
+            android:id="@+id/testActivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Test Activity"
+            android:drawableStart="@drawable/testactivity"
+            />
+        <EditText
+            android:id="@+id/Date"
+            android:inputType="date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="20-7-2016"
+            android:drawableStart="@drawable/date"
+            />
+
+        <EditText
+            android:id="@+id/days"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="7days"
+            android:drawableStart="@drawable/date"
+            />
+        <EditText
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="No"
+            android:drawableStart="@drawable/comm"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lv"
+        android:id="@+id/lh"
+        android:layout_marginTop="10dp"
+        >
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="save"
+        android:textColor="#ffffff"
+        android:background="#1a1"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        />
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="cancel"
+        android:textColor="#ffffff"
+        android:background="#9e9e9e"
+        android:layout_marginEnd="5dp"
+        />
+
+</LinearLayout>
 </RelativeLayout>
