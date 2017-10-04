@@ -23,7 +23,9 @@ package="com.geeconsystems.globalhr">
     <activity android:name=".UI.CreateLeaveRequest" />
 
 
-    <activity android:name=".UI.profilephoto"></activity>
+    <activity android:name=".UI.profilephoto"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateHidden"></activity>
 
     <activity android:name=".UI.Add_Employee_Reporting" />
     <activity android:name=".UI.Add_Job_Details" />
