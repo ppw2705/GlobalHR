@@ -10,8 +10,13 @@ package="com.geeconsystems.globalhr">
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-    <activity android:name=".UI.loginscreen" />
-    <activity android:name=".UI.Attendance" />
+    <activity android:name=".UI.loginscreen"
+    android:screenOrientation="portrait"
+    android:windowSoftInputMode="stateHidden"/>
+        />
+    <activity android:name=".UI.Attendance"
+    android:screenOrientation="portrait"
+    android:windowSoftInputMode="stateHidden"/>
     <activity android:name=".UI.Add_salary_details" />
     <activity android:name=".UI.My_employee_info" />
     <activity android:name=".UI.EditTimesheet" />
