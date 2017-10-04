@@ -67,7 +67,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/roundededitext"
                 android:hint="@string/username"
-                android:paddingStart="5dp"
+                android:textColorHint="#b2b2b2"
+                android:paddingStart="8dp"
                 android:paddingEnd="0dp"
                 />
 
@@ -100,10 +101,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:textColorHint="#b2b2b2"
                 android:inputType="textPassword"
                 android:background="@drawable/roundededitext"
                 android:hint="@string/password"
-                android:paddingStart="5dp"
+                android:paddingStart="8dp"
                 android:paddingEnd="0dp"
                 />
 
