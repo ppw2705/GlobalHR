@@ -1,9 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_mei"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.geeconsystems.globalhr.UI.mei">
 
-</android.support.constraint.ConstraintLayout>
+    <include
+        android:id="@+id/tulbar"
+        layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tulbar"
+        >
+
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="     Personal Details"
+            android:textSize="18sp"
+            android:background="#ff7f00"
+            android:textColor="@color/white"
+            android:textAlignment="inherit"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/label"
+            android:layout_marginBottom="315dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            />
+
+        <TextView
+            android:id="@+id/label2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="#ff7f00"
+            android:text="Job Detail"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:padding="10dp"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/r2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_below="@+id/label2"
+            android:layout_marginBottom="100dp"
+            android:layout_marginEnd="5dp"
+            />
+
+
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:background="#1a1"
+            android:layout_marginStart="5dp"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp"
+            android:layout_below="@+id/label2"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="5dp"
+            />
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
