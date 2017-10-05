@@ -12,8 +12,8 @@ import com.geeconsystems.globalhr.R;
 
 public class punch_in_out extends AppCompatActivity {
     Toolbar toolbar;
-    TextView punchin,punched,time;
-    Button punchout;
+    TextView punchin,punched,time,punchedout;
+    Button btn1,btn2;
     View line;
 
     @Override
@@ -26,8 +26,10 @@ public class punch_in_out extends AppCompatActivity {
         toolbar.setNavigationIcon(R.drawable.nav);
         punchin=(TextView)findViewById(R.id.punchin);
         punched=(TextView)findViewById(R.id.punched);
+        punchedout=(TextView)findViewById(R.id.punchedout);
         time=(TextView)findViewById(R.id.time);
-        punchout=(Button) findViewById(R.id.btnpunchout);
+        btn1=(Button) findViewById(R.id.btnpunchout);
+        btn2=(Button) findViewById(R.id.btnpunchin);
         line=(View)findViewById(R.id.view);
 
 
@@ -44,8 +46,18 @@ public class punch_in_out extends AppCompatActivity {
         punchin.setVisibility(View.INVISIBLE);
         punched.setVisibility(View.VISIBLE);
         time.setVisibility(View.VISIBLE);
-        punchout.setVisibility(View.VISIBLE);
+        btn1.setVisibility(View.VISIBLE);
         line.setVisibility(View.VISIBLE);
+
+    }
+    public  void btnpunchout(View v)
+    {
+        punchedout.setVisibility(View.VISIBLE);
+        time.setVisibility(View.VISIBLE);
+        line.setVisibility(View.VISIBLE);
+        btn2.setVisibility(View.VISIBLE);
+
+
 
     }
 }
