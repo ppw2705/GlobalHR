@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Punch In"
-
+        android:layout_centerInParent="true"
         android:textSize="50sp"
         android:textColor="#ffffff"
         android:layout_centerVertical="true"
@@ -83,6 +83,19 @@
         android:visibility="invisible"
         android:layout_alignTop="@+id/punchin"
         android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Punched Out"
+        android:id="@+id/punchedout"
+        android:onClick="punchedout"
+        android:layout_marginLeft="140dp"
+        android:textSize="40dp"
+        android:visibility="invisible"
+        android:textColor="@color/white"
+        android:layout_alignTop="@+id/punchin"
+        android:layout_centerHorizontal="true" />
     <Button
         android:layout_height="wrap_content"
         android:layout_width="300dp"
@@ -98,5 +111,21 @@
         android:id="@+id/btnpunchout"
         android:onClick="btnpunchout"
         android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btnpunchin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_alignBottom="@+id/btnpunchout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/punch_out"
+        android:text="Punch In"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:onClick="btnpunchin"/>
 
 </RelativeLayout>
