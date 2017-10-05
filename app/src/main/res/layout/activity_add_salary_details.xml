@@ -25,6 +25,7 @@
         <Spinner
             android:layout_marginTop="10dp"
             android:id="@+id/empname"
+            android:backgroundTint="#ff7e00"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp"

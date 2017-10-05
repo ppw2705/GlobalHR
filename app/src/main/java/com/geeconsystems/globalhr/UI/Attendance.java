@@ -50,7 +50,7 @@ public class Attendance extends AppCompatActivity implements NavigationView.OnNa
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Attendance.this,My_employee_info.class));
+                startActivity(new Intent(Attendance.this,punch_in_out.class));
             }
         });
 
