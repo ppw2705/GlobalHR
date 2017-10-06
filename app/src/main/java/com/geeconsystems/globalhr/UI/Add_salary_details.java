@@ -1,6 +1,7 @@
 package com.geeconsystems.globalhr.UI;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -28,7 +29,8 @@ public class Add_salary_details extends AppCompatActivity {
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Add Salary Details");
-        toolbar.setNavigationIcon(R.drawable.nav);
+        toolbar.setNavigationIcon(R.drawable.navwhite);
+        toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
 
         spinner=(Spinner)findViewById(R.id.empname);
         List<String> l1=new ArrayList<String>();
@@ -38,7 +40,7 @@ public class Add_salary_details extends AppCompatActivity {
 
         ArrayAdapter<String> adp = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l1);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner.setAdapter(adp);
 
@@ -50,7 +52,7 @@ public class Add_salary_details extends AppCompatActivity {
 
         ArrayAdapter<String> adp1 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l2);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner1.setAdapter(adp1);
 
@@ -62,7 +64,7 @@ public class Add_salary_details extends AppCompatActivity {
 
         ArrayAdapter<String> adp2 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l3);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner2.setAdapter(adp2);
 
@@ -73,7 +75,7 @@ public class Add_salary_details extends AppCompatActivity {
         l4.add("Currency");
         ArrayAdapter<String> adp3 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l4);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner3.setAdapter(adp3);
 
@@ -84,7 +86,7 @@ public class Add_salary_details extends AppCompatActivity {
         l5.add("Pay Frequency");
         ArrayAdapter<String> adp4 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l5);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner4.setAdapter(adp4);
         spinner5=(Spinner)findViewById(R.id.salarycomponent);
@@ -94,8 +96,7 @@ public class Add_salary_details extends AppCompatActivity {
         l6.add("Salary Component");
         ArrayAdapter<String> adp5 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l6);
-        adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
+        adp5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner5.setAdapter(adp5);
 
         button=(Button)findViewById(R.id.save);

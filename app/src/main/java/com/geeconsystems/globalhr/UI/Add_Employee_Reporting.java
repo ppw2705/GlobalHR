@@ -1,6 +1,7 @@
 package com.geeconsystems.globalhr.UI;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -28,7 +29,8 @@ public class Add_Employee_Reporting extends AppCompatActivity {
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Add Employee Reporting");
-        toolbar.setNavigationIcon(R.drawable.nav);
+        toolbar.setNavigationIcon(R.drawable.navwhite);
+        toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
         spinner=(Spinner)findViewById(R.id.empname);
         List<String> l1=new ArrayList<String>();
         l1.add("Employee Name");
@@ -37,7 +39,7 @@ public class Add_Employee_Reporting extends AppCompatActivity {
 
         ArrayAdapter<String> adp = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l1);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner.setAdapter(adp);
 
@@ -49,7 +51,7 @@ public class Add_Employee_Reporting extends AppCompatActivity {
 
         ArrayAdapter<String> adp1 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l2);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner1.setAdapter(adp1);
 
@@ -60,7 +62,7 @@ public class Add_Employee_Reporting extends AppCompatActivity {
         l3.add("Manager Type");
         ArrayAdapter<String> adp2 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l3);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner2.setAdapter(adp2);
 
@@ -68,10 +70,10 @@ public class Add_Employee_Reporting extends AppCompatActivity {
         List<String> l4=new ArrayList<String>();
         l4.add("Reporting Mode");
         l4.add("Reporting Mode");
-        l4.add("Reporting Type");
+        l4.add("Reporting Mode");
         ArrayAdapter<String> adp3 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l4);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner3.setAdapter(adp3);
 

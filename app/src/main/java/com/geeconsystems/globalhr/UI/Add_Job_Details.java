@@ -1,6 +1,7 @@
 package com.geeconsystems.globalhr.UI;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -28,7 +29,8 @@ public class Add_Job_Details extends AppCompatActivity {
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Add Job Detail");
-        toolbar.setNavigationIcon(R.drawable.nav);
+        toolbar.setNavigationIcon(R.drawable.navwhite);
+        toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
         spinner=(Spinner)findViewById(R.id.employee);
         List<String> l1=new ArrayList<String>();
         l1.add("Employee");
@@ -37,7 +39,7 @@ public class Add_Job_Details extends AppCompatActivity {
 
         ArrayAdapter<String> adp = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l1);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner.setAdapter(adp);
 
@@ -49,7 +51,7 @@ public class Add_Job_Details extends AppCompatActivity {
 
         ArrayAdapter<String> adp1 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l2);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner1.setAdapter(adp1);
 
@@ -60,7 +62,7 @@ public class Add_Job_Details extends AppCompatActivity {
         l3.add("Employement Type");
         ArrayAdapter<String> adp2 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l3);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner2.setAdapter(adp2);
 
@@ -71,7 +73,7 @@ public class Add_Job_Details extends AppCompatActivity {
         l4.add("Employement Category");
         ArrayAdapter<String> adp3 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l4);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner3.setAdapter(adp3);
 
@@ -83,7 +85,7 @@ public class Add_Job_Details extends AppCompatActivity {
 
         ArrayAdapter<String> adp4 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l5);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner4.setAdapter(adp4);
 
@@ -95,7 +97,7 @@ public class Add_Job_Details extends AppCompatActivity {
 
         ArrayAdapter<String> adp5 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l6);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner5.setAdapter(adp5);
 
@@ -106,7 +108,7 @@ public class Add_Job_Details extends AppCompatActivity {
         l16.add("jobcategory");
         ArrayAdapter<String> adp15 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l16);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp15.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner15.setAdapter(adp15);
 
@@ -118,7 +120,7 @@ public class Add_Job_Details extends AppCompatActivity {
         l7.add("department");
         ArrayAdapter<String> adp6 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l7);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp6.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner6.setAdapter(adp6);
 
@@ -129,7 +131,7 @@ public class Add_Job_Details extends AppCompatActivity {
         l8.add("holidaygroup");
         ArrayAdapter<String> adp7 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l8);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp7.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner7.setAdapter(adp7);
 
@@ -141,7 +143,7 @@ public class Add_Job_Details extends AppCompatActivity {
         l9.add("date of joinning");
         ArrayAdapter<String> adp8 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l9);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp8.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner8.setAdapter(adp8);
 
@@ -153,7 +155,7 @@ public class Add_Job_Details extends AppCompatActivity {
         l10.add("terminationreason");
         ArrayAdapter<String> adp9 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l10);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp9.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner9.setAdapter(adp9);
 
@@ -164,7 +166,7 @@ public class Add_Job_Details extends AppCompatActivity {
         l11.add("terminationdate");
         ArrayAdapter<String> adp10 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l11);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp10.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner10.setAdapter(adp10);
 
@@ -175,7 +177,7 @@ public class Add_Job_Details extends AppCompatActivity {
         l12.add("confirmationdate");
         ArrayAdapter<String> adp11 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l12);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp11.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner11.setAdapter(adp11);
 
@@ -186,7 +188,7 @@ public class Add_Job_Details extends AppCompatActivity {
         l13.add("lastapprasialdate");
         ArrayAdapter<String> adp12 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l13);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp12.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner12.setAdapter(adp12);
 
@@ -198,7 +200,7 @@ public class Add_Job_Details extends AppCompatActivity {
 
         ArrayAdapter<String> adp13 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l14);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp13.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner13.setAdapter(adp13);
 
@@ -209,7 +211,7 @@ public class Add_Job_Details extends AppCompatActivity {
         l15.add("resignationacceptedon");
         ArrayAdapter<String> adp14 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l15);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp14.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner14.setAdapter(adp14);
 

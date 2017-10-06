@@ -1,5 +1,6 @@
 package com.geeconsystems.globalhr.UI;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -23,17 +24,17 @@ public class Etimesheet extends AppCompatActivity {
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("EDIT TIMESHEET");
-        toolbar.setNavigationIcon(R.drawable.nav);
-
+        toolbar.setNavigationIcon(R.drawable.navwhite);
+        toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
 
         spinner=(Spinner)findViewById(R.id.timesheet2015);
         List<String> l2=new ArrayList<String>();
-        l2.add("timesheet2015");
-        l2.add("timesheet2015");
-        l2.add("timesheet2015");
+        l2.add("timesheet2015-q2");
+        l2.add("timesheet2015-q2");
+        l2.add("timesheet2015-q2");
         ArrayAdapter<String> adp1 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l2);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner.setAdapter(adp1);
 
@@ -44,7 +45,7 @@ public class Etimesheet extends AppCompatActivity {
         l3.add("2015-07-1");
         ArrayAdapter<String> adp2 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l3);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner2.setAdapter(adp2);
 
@@ -55,7 +56,7 @@ public class Etimesheet extends AppCompatActivity {
         l4.add("2015-07-15");
         ArrayAdapter<String> adp3 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l4);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner3.setAdapter(adp3);
 

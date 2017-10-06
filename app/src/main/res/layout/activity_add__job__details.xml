@@ -14,22 +14,43 @@
         android:id="@+id/lhb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:background="#d3d3d3"
         android:layout_below="@+id/t"
         >
 
+        <View
+            android:id="@+id/li"
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginTop="5dp"
+            android:background="#ff7f00"
+
+            />
         <Button
             android:id="@+id/btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginBottom="1dp"
             android:background="#ffffff"
             android:text="Add Detail"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textAlignment="center"
             android:textColor="#000000"
             android:layout_gravity="center"
+            />
+
+        <View
+            android:id="@+id/linewhite"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#ffffff"
             />
     </LinearLayout>
 
@@ -38,6 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="#d3d3d3"
         android:layout_below="@+id/lhb"
         >
         <ScrollView
@@ -50,190 +72,447 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/employee"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/employeegrosssalary"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/emplyee"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/employee"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dialog"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/employementtype"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/payfrquency"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/employeegrosssalary"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dialog"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/employementcategory"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/et"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/employementtype"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dialog"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/employementstatus"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ec"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/employementcategory"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dialog"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/jobtitle"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/status"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/employementstatus"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dialog"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/jobcategory"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/jobtitle"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/jobtitle"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="wrap_content"
+                        android:spinnerMode="dialog"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/department"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/jobcategory"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/jobcategory"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="wrap_content"
+                        android:spinnerMode="dialog"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
 
-                    />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/department"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/department"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="wrap_content"
+                        android:spinnerMode="dialog"
+                        />
 
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/holidaygroup"
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/dateofjoinning"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/holiday"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/holidaygroup"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="wrap_content"
+                        android:spinnerMode="dialog"
+                        />
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/terminationreason"
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/terminationdate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/datew"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/dateofjoinning"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dialog"
+                        />
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/confirmationdate"
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/lastapprasialdate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/terminationreason"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/terminationreason"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dialog"
+                        />
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/resignedon"
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
 
-                    />
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/resignationacceptedon"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/datew"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/terminationdate"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dialog"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:dropDownWidth="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:backgroundTint="#ff7f00"
-                    />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/datew"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/confirmationdate"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dialog"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/datew"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/lastapprasialdate"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dialog"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/resignedon"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/resignedon"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dialog"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/resignationacceptedon"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="5dp"
+                        />
+                    <Spinner
+                        android:layout_marginTop="0dp"
+                        android:id="@+id/resignationacceptedon"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#ff7f00"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dialog"
+                        />
+
+                </LinearLayout>
                 <LinearLayout
                     android:id="@+id/llv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:background="#d3d3d3"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
                     >
 
                     <Button

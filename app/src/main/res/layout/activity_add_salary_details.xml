@@ -4,6 +4,7 @@
     android:id="@+id/activity_add_salary_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#d3d3d3"
     tools:context="com.geeconsystems.globalhr.UI.Add_salary_details">
     <include
         android:id="@+id/t2"
@@ -12,93 +13,240 @@
         android:layout_width="match_parent"
         />
 
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#ff7f00"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/t2"
+        />
+
 
     <LinearLayout
         android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@+id/t2"
-        android:layout_marginTop="10dp"
+        android:layout_below="@+id/line"
+        android:layout_marginTop="5dp"
         >
 
-        <Spinner
-            android:layout_marginTop="10dp"
-            android:id="@+id/empname"
-            android:backgroundTint="#ff7e00"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:dropDownWidth="wrap_content"
-            android:spinnerMode="dropdown"
-            />
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:background="@drawable/spinnershape"
+            >
 
-        <Spinner
-            android:layout_marginTop="10dp"
-            android:id="@+id/empgrade"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/emplyee"
+                android:background="@drawable/leftcurvespinner"
+                android:padding="5dp"
+                />
+            <Spinner
+                android:layout_marginTop="0dp"
+                android:id="@+id/empname"
+                android:layout_width="match_parent"
+                android:backgroundTint="#ff7f00"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:dropDownWidth="wrap_content"
+                android:spinnerMode="dialog"
+                />
+
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:dropDownWidth="wrap_content"
-            android:spinnerMode="dropdown"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:background="@drawable/spinnershape"
+            >
 
-            />
-        <Spinner
-            android:layout_marginTop="10dp"
-            android:id="@+id/empgradelevel"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/empgrade"
+                android:background="@drawable/leftcurvespinner"
+                android:padding="5dp"
+                />
+            <Spinner
+                android:layout_marginTop="0dp"
+                android:id="@+id/empgrade"
+                android:layout_width="match_parent"
+                android:backgroundTint="#ff7f00"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:dropDownWidth="wrap_content"
+                android:spinnerMode="dialog"
+                />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:dropDownWidth="wrap_content"
-            android:spinnerMode="dropdown"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:background="@drawable/spinnershape"
+            >
 
-            />
-        <Spinner
-            android:layout_marginTop="10dp"
-            android:id="@+id/currency"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gradelevel"
+                android:background="@drawable/leftcurvespinner"
+                android:padding="5dp"
+                />
+            <Spinner
+                android:layout_marginTop="0dp"
+                android:id="@+id/empgradelevel"
+                android:layout_width="match_parent"
+                android:backgroundTint="#ff7f00"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:dropDownWidth="match_parent"
+                android:spinnerMode="dialog"
+                />
+
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:dropDownWidth="wrap_content"
-            android:spinnerMode="dropdown"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:background="@drawable/spinnershape"
+            >
 
-            />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/currency"
+                android:background="@drawable/leftcurvespinner"
+                android:padding="5dp"
+                />
+            <Spinner
+                android:layout_marginTop="0dp"
+                android:id="@+id/currency"
+                android:layout_width="match_parent"
+                android:backgroundTint="#ff7f00"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:dropDownWidth="match_parent"
+                android:spinnerMode="dialog"
+                />
 
-        <Spinner
-            android:layout_marginTop="10dp"
-            android:id="@+id/payfrequency"
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:dropDownWidth="wrap_content"
-            android:spinnerMode="dropdown"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:background="@drawable/spinnershape"
+            >
 
-            />
-        <Spinner
-            android:layout_marginTop="10dp"
-            android:id="@+id/salarycomponent"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/payfrquency"
+                android:background="@drawable/leftcurvespinner"
+                android:padding="5dp"
+                />
+            <Spinner
+                android:layout_marginTop="0dp"
+                android:id="@+id/payfrequency"
+                android:layout_width="match_parent"
+                android:backgroundTint="#ff7f00"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:dropDownWidth="match_parent"
+                android:spinnerMode="dialog"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:dropDownWidth="wrap_content"
-            android:spinnerMode="dropdown"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:background="@drawable/spinnershape"
+            >
 
-            />
-        <EditText
-            android:id="@+id/componentvalue"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/payfrquency"
+                android:background="@drawable/leftcurvespinner"
+                android:padding="5dp"
+                />
+            <Spinner
+                android:layout_marginTop="0dp"
+                android:id="@+id/salarycomponent"
+                android:layout_width="match_parent"
+                android:backgroundTint="#ff7f00"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:dropDownWidth="match_parent"
+                android:spinnerMode="dialog"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Component Value"
-            android:drawableStart="@drawable/comv"
-            />
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:background="@drawable/saldetailstextviewl"
+            >
 
-        <EditText
-            android:id="@+id/comments"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/componentvalue"
+                android:background="@drawable/leftcurvespinner"
+                android:padding="5dp"
+                />
+            <EditText
+                android:id="@+id/componentvalue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Component Value"
+                android:background="@drawable/saldetailstextviewr"
+                android:paddingStart="15dp"
+
+                />
+
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Comments"
-            android:drawableStart="@drawable/comments"
-            />
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:background="@drawable/saldetailstextviewl"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/comments"
+                android:background="@drawable/leftcurvespinner"
+                android:padding="5dp"
+                />
+            <EditText
+                android:id="@+id/comments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Comments"
+                android:background="@drawable/saldetailstextviewr"
+                android:paddingStart="15dp"
+
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -108,7 +256,7 @@
         android:orientation="horizontal"
         android:layout_below="@+id/lv"
         android:id="@+id/lh"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         >
 
         <Button
@@ -119,6 +267,9 @@
             android:text="save"
             android:textColor="#ffffff"
             android:background="#1a1"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textAllCaps="false"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             />
@@ -128,6 +279,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="cancel"
+            android:textSize="22sp"
+            android:textAllCaps="false"
+            android:textAlignment="center"
             android:textColor="#ffffff"
             android:background="#9e9e9e"
             android:layout_marginEnd="5dp"
@@ -135,8 +289,5 @@
 
 
     </LinearLayout>
-
-
-
 
 </RelativeLayout>
