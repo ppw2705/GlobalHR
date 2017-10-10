@@ -1,40 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.geeconsystems.globalhr">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geeconsystems.globalhr">
 
-<application android:allowBackup="true" android:icon="@mipmap/globalhrlogo" android:label="@string/app_name"
-    android:supportsRtl="true" android:theme="@style/AppTheme">
-    <activity android:name=".UI.splashscreen">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/globalhrlogo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".UI.splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-    <activity android:name=".UI.loginscreen"
-    android:screenOrientation="portrait"
-    android:windowSoftInputMode="stateHidden"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.loginscreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
         />
-    <activity android:name=".UI.Attendance"
-    android:screenOrientation="portrait"
-    android:windowSoftInputMode="stateHidden"/>
-    <activity android:name=".UI.Add_salary_details" />
-    <activity android:name=".UI.My_employee_info" />
-    <activity android:name=".UI.EditTimesheet" />
-    <activity android:name=".UI.CreateLeaveRequest" />
+        <activity
+            android:name=".UI.Attendance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".UI.Add_salary_details" />
+        <activity android:name=".UI.My_employee_info" />
+        <activity android:name=".UI.EditTimesheet" />
+        <activity android:name=".UI.CreateLeaveRequest" />
+        <activity android:name=".UI.profilephoto" />
+        <activity android:name=".UI.Add_Employee_Reporting" />
+        <activity android:name=".UI.Add_Job_Details" />
+        <activity android:name=".UI.punch_in_out"></activity>
+        <activity android:name=".UI.Etimesheet" />
+        <activity android:name=".UI.Employee_Info" />
+        <activity android:name=".etimesheetbottomdesign">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-    <activity android:name=".UI.profilephoto"
-        ></activity>
-
-    <activity android:name=".UI.Add_Employee_Reporting" />
-    <activity android:name=".UI.Add_Job_Details" />
-    <activity android:name=".UI.punch_in_out" >
-   </activity>
-
-
-    <activity android:name=".UI.Etimesheet" />
-    <activity android:name=".UI.Employee_Info"></activity>
-
-</application>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>
