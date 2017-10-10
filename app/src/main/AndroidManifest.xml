@@ -4,11 +4,7 @@ package="com.geeconsystems.globalhr">
 <application android:allowBackup="true" android:icon="@mipmap/globalhrlogo" android:label="@string/app_name"
     android:supportsRtl="true" android:theme="@style/AppTheme">
     <activity android:name=".UI.splashscreen">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
     </activity>
     <activity android:name=".UI.loginscreen"
     android:screenOrientation="portrait"
@@ -29,10 +25,13 @@ package="com.geeconsystems.globalhr">
     <activity android:name=".UI.Add_Employee_Reporting" />
     <activity android:name=".UI.Add_Job_Details" />
     <activity android:name=".UI.punch_in_out" >
+
    </activity>
 
+    <activity android:name=".UI.Etimesheet" >
 
-    <activity android:name=".UI.Etimesheet" />
+   </activity>
+
     <activity android:name=".UI.Employee_Info"></activity>
 
 </application>

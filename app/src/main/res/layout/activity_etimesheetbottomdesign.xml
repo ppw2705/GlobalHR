@@ -121,11 +121,11 @@
         </LinearLayout>
         <View
             android:id="@+id/detailline"
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:background="#a0a0a0"
             android:layout_weight="1"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
             />
         <LinearLayout
             android:id="@+id/detailright"
@@ -195,6 +195,18 @@
                     android:orientation="vertical"
                     android:layout_weight="1"
                     >
+
+                    <TextView
+                        android:id="@+id/ghrcvt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="GlobalHr created via Timesheet"
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/tsactivity"
                         android:layout_width="match_parent"
@@ -202,17 +214,6 @@
                         android:text="Ts Activity"
                         android:textSize="13sp"
                         android:textColor="#a0a0a0"
-                        />
-                    <TextView
-                        android:id="@+id/ghrcvt2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="GlobalHr created via Timesheet"
-                        android:textColor="#000000"
-                        android:textAlignment="viewStart"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:textSize="11sp"
                         />
 
                 </LinearLayout>
