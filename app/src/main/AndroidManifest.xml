@@ -33,6 +33,15 @@ package="com.geeconsystems.globalhr">
    </activity>
 
     <activity android:name=".UI.Employee_Info"></activity>
+    <activity android:name=".etimesheetbottomdesign">
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+    </activity>
 
 </application>
 
