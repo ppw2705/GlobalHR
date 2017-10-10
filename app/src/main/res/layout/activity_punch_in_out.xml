@@ -17,14 +17,13 @@
         android:id="@+id/punch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tobar"
         android:src="@drawable/timebg"
         android:onClick="punchin"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/effect"
 
-        />
+        android:layout_below="@+id/tobar"
+        android:layout_centerHorizontal="true" />
 
 
     <TextView
@@ -32,11 +31,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Punch In"
-        android:layout_centerInParent="true"
         android:textSize="50sp"
         android:textColor="#ffffff"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/view"
+        android:layout_alignEnd="@+id/punched" />
 
     <Button
         android:id="@+id/cal"
@@ -55,17 +53,19 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="53dp"
+        android:layout_marginLeft="10dp"
         android:text="11:00"
         android:textAlignment="center"
         android:textSize="35dp"
         android:visibility="invisible"
+        android:textColor="@color/white"
         android:layout_alignTop="@+id/punch"
         android:layout_alignStart="@+id/view" />
 
 <View
     android:layout_width="120dp"
     android:layout_height="2dp"
-    android:background="@color/white"
+    android:background="#feb46d"
     android:layout_below="@+id/time"
     android:layout_marginLeft="120dp"
     android:id="@+id/view"
@@ -77,9 +77,11 @@
         android:gravity="center"
         android:text="Punched In"
         android:id="@+id/punched"
-        android:onClick="punchedin"
+
         android:layout_marginLeft="140dp"
+        android:layout_marginTop="18dp"
         android:textSize="40dp"
+        android:textColor="@color/white"
         android:visibility="invisible"
         android:layout_alignTop="@+id/punchin"
         android:layout_centerHorizontal="true" />
@@ -89,45 +91,83 @@
         android:gravity="center"
         android:text="Punched Out"
         android:id="@+id/punchedout"
-        android:onClick="punchedout"
         android:layout_marginLeft="140dp"
-        android:textSize="40dp"
+        android:layout_marginTop="18dp"
+        android:textSize="38dp"
         android:visibility="invisible"
         android:textColor="@color/white"
         android:layout_alignTop="@+id/punchin"
         android:layout_centerHorizontal="true" />
-    <Button
-        android:layout_height="wrap_content"
-        android:layout_width="300dp"
-        android:textAllCaps="false"
-        android:layout_below="@+id/cal"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/punch_out"
-        android:text="Punch Out"
-        android:textSize="20dp"
+    <TextView
+        android:id="@+id/date_time"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:text="JUL.2        6:20"
+        android:textSize="15dp"
+        android:background="@drawable/text_border"
         android:gravity="center"
-        android:id="@+id/btnpunchout"
-        android:onClick="btnpunchout"
+        android:textColor="#feb46d"
+        android:layout_below="@+id/punched"
+        android:layout_alignEnd="@+id/cal"
+        android:layout_marginTop="10dp"
         android:visibility="invisible"/>
 
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible"
+        android:id="@+id/relative"
+        android:layout_below="@+id/cal"
+        android:background="#eeeeee"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true">
+
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btnpunchout"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:text="Punch Out"
+        android:textAllCaps="false"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:onClick="btnpunchout"
+        android:background="@drawable/punch_out"
+        android:layout_alignStart="@+id/punch"
+        android:layout_alignEnd="@+id/punch"
+        android:visibility="invisible"/>
     <Button
         android:id="@+id/btnpunchin"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:layout_alignBottom="@+id/btnpunchout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/punch_in"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
         android:text="Punch In"
-        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:textSize="25dp"
         android:textColor="@color/white"
-        android:gravity="center"
         android:onClick="btnpunchin"
+        android:background="@drawable/punch_in"
+        android:layout_alignStart="@+id/punch"
+        android:layout_alignEnd="@+id/punch"
         android:visibility="invisible"/>
 
+    <ImageView
+        android:id="@+id/imgclock"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@android:drawable/ic_menu_recent_history"
+        android:layout_alignTop="@+id/btnpunchout"
+        android:layout_alignStart="@+id/punchedout"
+        android:visibility="invisible"/>
+
+
 </RelativeLayout>
+

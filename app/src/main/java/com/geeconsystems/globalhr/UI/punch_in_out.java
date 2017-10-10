@@ -6,15 +6,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.geeconsystems.globalhr.R;
 
 public class punch_in_out extends AppCompatActivity {
     Toolbar toolbar;
-    TextView punchin,punched,time,punchedout;
+    TextView punchin,punched,time,punchedout,date_time;
     Button btn1,btn2;
     View line;
+    ImageView imgclock;
+    RelativeLayout relativeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +35,10 @@ public class punch_in_out extends AppCompatActivity {
         btn1=(Button) findViewById(R.id.btnpunchout);
         btn2=(Button) findViewById(R.id.btnpunchin);
         line=(View)findViewById(R.id.view);
-
+        btn2.setVisibility(View.INVISIBLE);
+        relativeLayout=(RelativeLayout)findViewById(R.id.relative);
+        date_time=(TextView) findViewById(R.id.date_time);
+        imgclock=(ImageView)findViewById(R.id.imgclock);
 
     }
     @Override
@@ -45,9 +52,13 @@ public class punch_in_out extends AppCompatActivity {
     {
         punchin.setVisibility(View.INVISIBLE);
         punched.setVisibility(View.VISIBLE);
+        punchedout.setVisibility(View.INVISIBLE);
         time.setVisibility(View.VISIBLE);
         btn1.setVisibility(View.VISIBLE);
         line.setVisibility(View.VISIBLE);
+        relativeLayout.setVisibility(View.VISIBLE);
+        date_time.setVisibility(View.VISIBLE);
+        imgclock.setVisibility(View.VISIBLE);
 
     }
     public  void btnpunchout(View v)
@@ -56,8 +67,25 @@ public class punch_in_out extends AppCompatActivity {
         time.setVisibility(View.VISIBLE);
         line.setVisibility(View.VISIBLE);
         btn2.setVisibility(View.VISIBLE);
+        punched.setVisibility(View.INVISIBLE);
+        relativeLayout.setVisibility(View.VISIBLE);
+        date_time.setVisibility(View.VISIBLE);
+        imgclock.setVisibility(View.VISIBLE);
 
 
+
+    }
+    public  void btnpunchin(View v)
+    {
+        punchedout.setVisibility(View.INVISIBLE);
+        time.setVisibility(View.VISIBLE);
+        line.setVisibility(View.VISIBLE);
+        btn2.setVisibility(View.INVISIBLE);
+        btn1.setVisibility(View.VISIBLE);
+        punched.setVisibility(View.VISIBLE);
+        relativeLayout.setVisibility(View.VISIBLE);
+        date_time.setVisibility(View.VISIBLE);
+        imgclock.setVisibility(View.VISIBLE);
 
     }
 }

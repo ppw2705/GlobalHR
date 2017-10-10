@@ -21,17 +21,18 @@ public class Attendance extends AppCompatActivity implements NavigationView.OnNa
     ImageView b1,b2,b3,b4;
     NavigationView navigationView;
     DrawerLayout drawer;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("ATTENDANCE");
-        // toolbar.setNavigationIcon(R.drawable.navwhite);
 
-        toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
+        setSupportActionBar(toolbar);
+       // getSupportActionBar().setTitle("ATTENDANCE");
+
+       // toolbar.setNavigationIcon(R.drawable.navwhite);
+
+      //  toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
 
         drawer=(DrawerLayout)findViewById(R.id.drawer);
 
@@ -46,15 +47,15 @@ public class Attendance extends AppCompatActivity implements NavigationView.OnNa
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        b1=(ImageView)findViewById(R.id.pioimg);
+        b1=(ImageView)findViewById(R.id.imageView);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Attendance.this,punch_in_out.class));
+                startActivity(new Intent(Attendance.this,My_employee_info.class));
             }
         });
 
-        b2=(ImageView)findViewById(R.id.arimg);
+        b2=(ImageView)findViewById(R.id.imageView2);
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,7 +63,7 @@ public class Attendance extends AppCompatActivity implements NavigationView.OnNa
             }
         });
 
-        b3=(ImageView)findViewById(R.id.aregimg);
+        b3=(ImageView)findViewById(R.id.imageView3);
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +71,7 @@ public class Attendance extends AppCompatActivity implements NavigationView.OnNa
             }
         });
 
-        b4=(ImageView)findViewById(R.id.aeimg);
+        b4=(ImageView)findViewById(R.id.imageView4);
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
