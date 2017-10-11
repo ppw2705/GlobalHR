@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -29,7 +30,7 @@ public class Add_Employee_Reporting extends AppCompatActivity {
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Add Employee Reporting");
-        toolbar.setNavigationIcon(R.drawable.navwhite);
+        toolbar.setNavigationIcon(R.drawable.back);
         toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
         spinner=(Spinner)findViewById(R.id.empname);
         List<String> l1=new ArrayList<String>();
@@ -82,7 +83,7 @@ public class Add_Employee_Reporting extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Add_Employee_Reporting.this,Etimesheet.class));
+              //  startActivity(new Intent(Add_Employee_Reporting.this,Etimesheet.class));
             }
         });
 
@@ -94,5 +95,18 @@ public class Add_Employee_Reporting extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.add, menu);
         return super.onCreateOptionsMenu(menu);
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        int  id=item.getItemId();
+        if(id== android.R.id.home){
+            this.finish();
+        }
+
+        return super.onOptionsItemSelected(item);
+
+
+    }
+
 
 }

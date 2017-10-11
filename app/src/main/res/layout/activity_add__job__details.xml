@@ -85,7 +85,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/emplyee"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -112,7 +112,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/payfrquency"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -139,7 +139,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/et"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -166,7 +166,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/ec"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -193,7 +193,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/status"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -220,7 +220,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/jobtitle"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -247,7 +247,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/jobcategory"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -274,7 +274,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/department"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -301,7 +301,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/holiday"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -328,13 +328,14 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/datew"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
                         android:id="@+id/dateofjoinning"
                         android:layout_width="match_parent"
                         android:backgroundTint="#ff7f00"
+                        style="@android:style/Widget.DeviceDefault.Light.Spinner"
                         android:layout_height="match_parent"
                         android:padding="10dp"
                         android:dropDownWidth="match_parent"
@@ -355,7 +356,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/terminationreason"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -382,7 +383,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/datew"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -409,7 +410,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/datew"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -436,7 +437,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/datew"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -463,7 +464,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/resignedon"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -490,7 +491,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/resignationacceptedon"
                         android:background="@drawable/leftcurvespinner"
-                        android:padding="5dp"
+                        android:padding="3dp"
                         />
                     <Spinner
                         android:layout_marginTop="0dp"
@@ -520,7 +521,10 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="save"
+                        android:text="Save"
+                        android:textAllCaps="false"
+                        android:textSize="22sp"
+                        android:fontFamily="serif"
                         android:textColor="#ffffff"
                         android:background="#1a1"
                         android:layout_marginStart="5dp"
@@ -531,7 +535,10 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="cancel"
+                        android:text="Cancel"
+                        android:textAllCaps="false"
+                        android:textSize="22sp"
+                        android:fontFamily="serif"
                         android:textColor="#ffffff"
                         android:background="#9e9e9e"
                         android:layout_marginEnd="5dp"

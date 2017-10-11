@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/emplyee"
                 android:background="@drawable/leftcurvespinner"
-                android:padding="5dp"
+                android:padding="3dp"
                 />
             <Spinner
                 android:layout_marginTop="0dp"
@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/manger"
                 android:background="@drawable/leftcurvespinner"
-                android:padding="5dp"
+                android:padding="3dp"
                 />
             <Spinner
                 android:layout_marginTop="0dp"
@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/manger"
                 android:background="@drawable/leftcurvespinner"
-                android:padding="5dp"
+                android:padding="3dp"
                 />
             <Spinner
                 android:layout_marginTop="0dp"
@@ -134,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/reportingmode"
                 android:background="@drawable/leftcurvespinner"
-                android:padding="5dp"
+                android:padding="3dp"
                 />
             <Spinner
                 android:layout_marginTop="0dp"
@@ -166,7 +166,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="save"
+            android:text="Save"
+            android:fontFamily="serif"
             android:textColor="#ffffff"
             android:background="#1a1"
             android:textAlignment="center"
@@ -180,8 +181,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="cancel"
+            android:text="Cancel"
             android:textSize="22sp"
+            android:fontFamily="serif"
             android:textAllCaps="false"
             android:textAlignment="center"
             android:textColor="#ffffff"
