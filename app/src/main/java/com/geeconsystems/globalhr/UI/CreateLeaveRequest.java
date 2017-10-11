@@ -1,5 +1,6 @@
 package com.geeconsystems.globalhr.UI;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -23,7 +24,8 @@ public class CreateLeaveRequest extends AppCompatActivity {
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Create Leave Request");
-        toolbar.setNavigationIcon(R.drawable.nav);
+        toolbar.setNavigationIcon(R.drawable.navwhite);
+        toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
 
         spinner=(Spinner)findViewById(R.id.leaveType);
         List<String> l1=new ArrayList<String>();
@@ -33,7 +35,7 @@ public class CreateLeaveRequest extends AppCompatActivity {
 
         ArrayAdapter<String> adp = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l1);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner.setAdapter(adp);
 
@@ -44,7 +46,7 @@ public class CreateLeaveRequest extends AppCompatActivity {
         l2.add("Start Date");
         ArrayAdapter<String> adp1 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l2);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner1.setAdapter(adp1);
 
@@ -57,7 +59,7 @@ public class CreateLeaveRequest extends AppCompatActivity {
 
         ArrayAdapter<String> adp2 = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, l3);
-        //adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adp2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner2.setAdapter(adp2);
 

@@ -35,7 +35,7 @@ public class loginscreen extends AppCompatActivity {
 
                 if (u.length()>0&&p.length()>0) {
 
-                  //  startActivity(new Intent(getApplicationContext(),Attendance.class));
+                   startActivity(new Intent(getApplicationContext(),Attendance.class));
 
 
                 }

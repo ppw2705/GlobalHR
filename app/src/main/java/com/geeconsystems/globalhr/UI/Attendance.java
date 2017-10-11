@@ -26,14 +26,9 @@ public class Attendance extends AppCompatActivity implements NavigationView.OnNa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
-
         setSupportActionBar(toolbar);
-       getSupportActionBar().setTitle("ATTENDANCE");
-
-        toolbar.setNavigationIcon(R.drawable.navwhite);
-
+        getSupportActionBar().setTitle("ATTENDANCE");
         toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
-
         drawer=(DrawerLayout)findViewById(R.id.drawer);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
