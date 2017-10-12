@@ -2,15 +2,19 @@ package com.geeconsystems.globalhr.UI;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.geeconsystems.globalhr.R;
 
@@ -21,7 +25,7 @@ public class Add_Employee_Reporting extends AppCompatActivity {
     Toolbar toolbar;
     Spinner spinner,spinner1,spinner2,spinner3;
     Button save;
-
+    ArrayAdapter<String> adp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +42,30 @@ public class Add_Employee_Reporting extends AppCompatActivity {
         l1.add("Employee Name");
         l1.add("Employee Name");
 
-        ArrayAdapter<String> adp = new ArrayAdapter<String>
-                (this, android.R.layout.simple_spinner_item, l1);
-        adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,l1) {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
 
-        spinner.setAdapter(adp);
+                View v = super.getView(position, convertView, parent);
+                if (position == getCount()) {
+                    ((TextView)v.findViewById(android.R.id.text1)).setText("");
+                    ((TextView)v.findViewById(android.R.id.text1)).setHint(getItem(getCount())); //"Hint to be displayed"
+                }
+
+                return v;
+            }
+
+            @Override
+            public int getCount() {
+                return super.getCount()-1; // you dont display last item. It is used as hint.
+            }
+
+        };
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //adapter.add("Employee Name");
+
+        spinner.setAdapter(adapter);
+        spinner.setSelection(adapter.getCount()); //display hint
 
         spinner1=(Spinner)findViewById(R.id.manager);
         List<String> l2=new ArrayList<String>();

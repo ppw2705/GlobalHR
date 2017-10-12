@@ -3,7 +3,7 @@
 <item
     android:id="@+id/notification"
     android:title="Notification"
-    android:icon="@drawable/notification"
+    android:icon="@drawable/mm"
     android:showAsAction="never"
     />
 
@@ -16,7 +16,7 @@
     <item
         android:id="@+id/settings"
         android:title="Settings"
-        android:icon="@drawable/settings"
+        android:icon="@drawable/mm"
         android:showAsAction="never"
         />
 
