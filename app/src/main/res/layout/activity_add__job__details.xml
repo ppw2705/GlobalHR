@@ -320,7 +320,6 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_margin="5dp"
-                    android:background="@drawable/spinnershape"
                     >
 
                     <ImageView
@@ -330,16 +329,18 @@
                         android:background="@drawable/leftcurvespinner"
                         android:padding="3dp"
                         />
-                    <Spinner
+                    <EditText
                         android:layout_marginTop="0dp"
                         android:id="@+id/dateofjoinning"
                         android:layout_width="match_parent"
-                        android:backgroundTint="#ff7f00"
-                        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+                        android:background="@drawable/spinnershape"
+                        android:inputType="none"
+                        android:clickable="true"
+                        android:hint="Date of Joining"
+                        android:textColorHint="#d3d3d3"
+                        android:focusable="false"
                         android:layout_height="match_parent"
                         android:padding="10dp"
-                        android:dropDownWidth="match_parent"
-                        android:spinnerMode="dialog"
                         />
 
                 </LinearLayout>

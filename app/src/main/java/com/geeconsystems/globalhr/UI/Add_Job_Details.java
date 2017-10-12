@@ -1,7 +1,10 @@
 package com.geeconsystems.globalhr.UI;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -10,19 +13,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.geeconsystems.globalhr.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class Add_Job_Details extends AppCompatActivity {
     Toolbar toolbar;
     Spinner spinner,spinner1,spinner2,spinner3,spinner4,
-            spinner5,spinner6,spinner7,spinner8,spinner9,spinner10,spinner11,spinner12,spinner13,spinner14,spinner15;
+            spinner5,spinner6,spinner7,spinner9,spinner10,spinner11,spinner12,spinner13,spinner14,spinner15;
     Button btnsave;
-
+EditText spinner8;
+  public Calendar myCalendar=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -135,18 +142,32 @@ public class Add_Job_Details extends AppCompatActivity {
         adp7.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner7.setAdapter(adp7);
+         myCalendar = Calendar.getInstance();
 
+        spinner8=(EditText) findViewById(R.id.dateofjoinning);
+       final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
-        spinner8=(Spinner)findViewById(R.id.dateofjoinning);
-        List<String> l9=new ArrayList<String>();
-        l9.add("date of joinning");
-        l9.add("date of joinning");
-        l9.add("date of joinning");
-        ArrayAdapter<String> adp8 = new ArrayAdapter<String>
-                (this, android.R.layout.simple_spinner_item, l9);
-        adp8.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateLabel();
+            }
 
-        spinner8.setAdapter(adp8);
+        };
+        spinner8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new DatePickerDialog(Add_Job_Details.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+
+            }
+        });
+
 
         spinner9=(Spinner)findViewById(R.id.terminationreason);
         List<String> l10=new ArrayList<String>();
@@ -243,5 +264,12 @@ public class Add_Job_Details extends AppCompatActivity {
 
 
     }
+    private void updateLabel() {
+        String myFormat = "MM/dd/yy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+        spinner8.setText(sdf.format(myCalendar.getTime()));
+    }
+
 
 }
