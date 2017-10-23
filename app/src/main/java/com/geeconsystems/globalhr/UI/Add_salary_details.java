@@ -8,9 +8,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.geeconsystems.globalhr.R;
 
@@ -35,16 +37,40 @@ public class Add_salary_details extends AppCompatActivity {
 
 
         spinner=(Spinner)findViewById(R.id.empname);
-        List<String> l1=new ArrayList<String>();
-        l1.add("Employee Name");
-        l1.add("Employee Name");
-        l1.add("Employee Name");
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item) {
 
-        ArrayAdapter<String> adp = new ArrayAdapter<String>
-                (this, android.R.layout.simple_spinner_item, l1);
-        adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
 
-        spinner.setAdapter(adp);
+                View v = super.getView(position, convertView, parent);
+                if (position == getCount()) {
+                    ((TextView)v.findViewById(android.R.id.text1)).setText("");
+                    ((TextView)v.findViewById(android.R.id.text1)).setHint(getItem(getCount())); //"Hint to be displayed"
+                }
+
+                return v;
+            }
+
+            @Override
+            public int getCount() {
+                return super.getCount()-1; // you dont display last item. It is used as hint.
+            }
+
+        };
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.add("Daily");
+        adapter.add("Two Days");
+        adapter.add("Weekly");
+        adapter.add("Monthly");
+        adapter.add("Three Months");
+        adapter.add("Employee Name"); //This is the text that will be displayed as hint.
+
+
+        spinner.setAdapter(adapter);
+        spinner.setSelection(adapter.getCount()); //set the hint the default selection so it appears on launch.
+        spinner.setPrompt("Please Select::");
+
 
         spinner1=(Spinner)findViewById(R.id.empgrade);
         List<String> l2=new ArrayList<String>();
