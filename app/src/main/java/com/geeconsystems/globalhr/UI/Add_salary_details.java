@@ -73,59 +73,187 @@ public class Add_salary_details extends AppCompatActivity {
 
 
         spinner1=(Spinner)findViewById(R.id.empgrade);
-        List<String> l2=new ArrayList<String>();
-        l2.add("Employee Grade");
-        l2.add("Employee Grade");
-        l2.add("Employee Grade");
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item) {
 
-        ArrayAdapter<String> adp1 = new ArrayAdapter<String>
-                (this, android.R.layout.simple_spinner_item, l2);
-        adp1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
 
-        spinner1.setAdapter(adp1);
+                View v = super.getView(position, convertView, parent);
+                if (position == getCount()) {
+                    ((TextView)v.findViewById(android.R.id.text1)).setText("");
+                    ((TextView)v.findViewById(android.R.id.text1)).setHint(getItem(getCount())); //"Hint to be displayed"
+                }
+
+                return v;
+            }
+
+            @Override
+            public int getCount() {
+                return super.getCount()-1; // you dont display last item. It is used as hint.
+            }
+
+        };
+
+        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter1.add("Daily");
+        adapter1.add("Two Days");
+        adapter1.add("Weekly");
+        adapter1.add("Monthly");
+        adapter1.add("Three Months");
+        adapter1.add("Employee Grade"); //This is the text that will be displayed as hint.
+
+
+        spinner1.setAdapter(adapter1);
+        spinner1.setSelection(adapter1.getCount()); //set the hint the default selection so it appears on launch.
+        spinner1.setPrompt("Please Select::");
+
+
 
         spinner2=(Spinner)findViewById(R.id.empgradelevel);
-        List<String> l3=new ArrayList<String>();
-        l3.add("Employee Grade Level");
-        l3.add("Employee Grade Level");
-        l3.add("Employee Grade Level");
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item) {
 
-        ArrayAdapter<String> adp2 = new ArrayAdapter<String>
-                (this, android.R.layout.simple_spinner_item, l3);
-        adp2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
 
-        spinner2.setAdapter(adp2);
+                View v = super.getView(position, convertView, parent);
+                if (position == getCount()) {
+                    ((TextView)v.findViewById(android.R.id.text1)).setText("");
+                    ((TextView)v.findViewById(android.R.id.text1)).setHint(getItem(getCount())); //"Hint to be displayed"
+                }
+
+                return v;
+            }
+
+            @Override
+            public int getCount() {
+                return super.getCount()-1; // you dont display last item. It is used as hint.
+            }
+
+        };
+
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter2.add("Daily");
+        adapter2.add("Two Days");
+        adapter2.add("Weekly");
+        adapter2.add("Monthly");
+        adapter2.add("Three Months");
+        adapter2.add("Employee Grade Level"); //This is the text that will be displayed as hint.
+
+
+        spinner2.setAdapter(adapter2);
+        spinner2.setSelection(adapter2.getCount()); //set the hint the default selection so it appears on launch.
+        spinner2.setPrompt("Please Select::");
+
+
 
         spinner3=(Spinner)findViewById(R.id.currency);
-        List<String> l4=new ArrayList<String>();
-        l4.add("Currency");
-        l4.add("Currency");
-        l4.add("Currency");
-        ArrayAdapter<String> adp3 = new ArrayAdapter<String>
-                (this, android.R.layout.simple_spinner_item, l4);
-        adp3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item) {
 
-        spinner3.setAdapter(adp3);
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+
+                View v = super.getView(position, convertView, parent);
+                if (position == getCount()) {
+                    ((TextView)v.findViewById(android.R.id.text1)).setText("");
+                    ((TextView)v.findViewById(android.R.id.text1)).setHint(getItem(getCount())); //"Hint to be displayed"
+                }
+
+                return v;
+            }
+
+            @Override
+            public int getCount() {
+                return super.getCount()-1; // you dont display last item. It is used as hint.
+            }
+
+        };
+
+        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter3.add("Daily");
+        adapter3.add("Two Days");
+        adapter3.add("Weekly");
+        adapter3.add("Monthly");
+        adapter3.add("Three Months");
+        adapter3.add("Currency"); //This is the text that will be displayed as hint.
+
+
+        spinner3.setAdapter(adapter3);
+        spinner3.setSelection(adapter3.getCount()); //set the hint the default selection so it appears on launch.
+        spinner3.setPrompt("Please Select::");
+
 
         spinner4=(Spinner)findViewById(R.id.payfrequency);
-        List<String> l5=new ArrayList<String>();
-        l5.add("Pay Frequency");
-        l5.add("Pay Frequency");
-        l5.add("Pay Frequency");
-        ArrayAdapter<String> adp4 = new ArrayAdapter<String>
-                (this, android.R.layout.simple_spinner_item, l5);
-        adp4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter4 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item) {
 
-        spinner4.setAdapter(adp4);
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+
+                View v = super.getView(position, convertView, parent);
+                if (position == getCount()) {
+                    ((TextView)v.findViewById(android.R.id.text1)).setText("");
+                    ((TextView)v.findViewById(android.R.id.text1)).setHint(getItem(getCount())); //"Hint to be displayed"
+                }
+
+                return v;
+            }
+
+            @Override
+            public int getCount() {
+                return super.getCount()-1; // you dont display last item. It is used as hint.
+            }
+
+        };
+
+        adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter4.add("Daily");
+        adapter4.add("Two Days");
+        adapter4.add("Weekly");
+        adapter4.add("Monthly");
+        adapter4.add("Three Months");
+        adapter4.add("Pay Frequency"); //This is the text that will be displayed as hint.
+
+
+        spinner4.setAdapter(adapter4);
+        spinner4.setSelection(adapter4.getCount()); //set the hint the default selection so it appears on launch.
+        spinner4.setPrompt("Please Select::");
+
+
         spinner5=(Spinner)findViewById(R.id.salarycomponent);
-        List<String> l6=new ArrayList<String>();
-        l6.add("Salary Component");
-        l6.add("Salary Component");
-        l6.add("Salary Component");
-        ArrayAdapter<String> adp5 = new ArrayAdapter<String>
-                (this, android.R.layout.simple_spinner_item, l6);
-        adp5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner5.setAdapter(adp5);
+        ArrayAdapter<String> adapter5 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item) {
+
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+
+                View v = super.getView(position, convertView, parent);
+                if (position == getCount()) {
+                    ((TextView)v.findViewById(android.R.id.text1)).setText("");
+                    ((TextView)v.findViewById(android.R.id.text1)).setHint(getItem(getCount())); //"Hint to be displayed"
+                }
+
+                return v;
+            }
+
+            @Override
+            public int getCount() {
+                return super.getCount()-1; // you dont display last item. It is used as hint.
+            }
+
+        };
+
+        adapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter5.add("Daily");
+        adapter5.add("Two Days");
+        adapter5.add("Weekly");
+        adapter5.add("Monthly");
+        adapter5.add("Three Months");
+        adapter5.add("Salary Component"); //This is the text that will be displayed as hint.
+
+
+        spinner5.setAdapter(adapter5);
+        spinner5.setSelection(adapter5.getCount()); //set the hint the default selection so it appears on launch.
+        spinner5.setPrompt("Please Select::");
+
+
 
         button=(Button)findViewById(R.id.save);
         button.setOnClickListener(new View.OnClickListener() {

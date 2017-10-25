@@ -376,7 +376,6 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_margin="5dp"
-                    android:background="@drawable/spinnershape"
                     >
 
                     <ImageView
@@ -386,15 +385,18 @@
                         android:background="@drawable/leftcurvespinner"
                         android:padding="3dp"
                         />
-                    <Spinner
+                    <EditText
                         android:layout_marginTop="0dp"
                         android:id="@+id/terminationdate"
                         android:layout_width="match_parent"
-                        android:backgroundTint="#ff7f00"
+                        android:background="@drawable/spinnershape"
+                        android:inputType="none"
+                        android:clickable="true"
+                        android:hint="Termination Date"
+                        android:textColorHint="#d3d3d3"
+                        android:focusable="false"
                         android:layout_height="match_parent"
                         android:padding="10dp"
-                        android:dropDownWidth="match_parent"
-                        android:spinnerMode="dialog"
                         />
 
                 </LinearLayout>
@@ -403,7 +405,6 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_margin="5dp"
-                    android:background="@drawable/spinnershape"
                     >
 
                     <ImageView
@@ -413,15 +414,18 @@
                         android:background="@drawable/leftcurvespinner"
                         android:padding="3dp"
                         />
-                    <Spinner
+                    <EditText
                         android:layout_marginTop="0dp"
                         android:id="@+id/confirmationdate"
                         android:layout_width="match_parent"
-                        android:backgroundTint="#ff7f00"
+                        android:background="@drawable/spinnershape"
+                        android:inputType="none"
+                        android:clickable="true"
+                        android:hint="Confirmation Date"
+                        android:textColorHint="#d3d3d3"
+                        android:focusable="false"
                         android:layout_height="match_parent"
                         android:padding="10dp"
-                        android:dropDownWidth="match_parent"
-                        android:spinnerMode="dialog"
                         />
 
                 </LinearLayout>
@@ -430,7 +434,6 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_margin="5dp"
-                    android:background="@drawable/spinnershape"
                     >
 
                     <ImageView
@@ -440,18 +443,22 @@
                         android:background="@drawable/leftcurvespinner"
                         android:padding="3dp"
                         />
-                    <Spinner
+                    <EditText
                         android:layout_marginTop="0dp"
-                        android:id="@+id/lastapprasialdate"
+                        android:id="@+id/lastapriasaldate"
                         android:layout_width="match_parent"
-                        android:backgroundTint="#ff7f00"
+                        android:background="@drawable/spinnershape"
+                        android:inputType="none"
+                        android:clickable="true"
+                        android:hint="Last Apraisal Date"
+                        android:textColorHint="#d3d3d3"
+                        android:focusable="false"
                         android:layout_height="match_parent"
                         android:padding="10dp"
-                        android:dropDownWidth="match_parent"
-                        android:spinnerMode="dialog"
                         />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
