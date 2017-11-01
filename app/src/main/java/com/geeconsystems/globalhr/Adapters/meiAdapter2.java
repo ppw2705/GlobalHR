@@ -6,28 +6,32 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.geeconsystems.globalhr.CustomCells.recycler_list;
+import com.geeconsystems.globalhr.CustomCells.recycler_list2;
 import com.geeconsystems.globalhr.R;
 
 import java.util.List;
 
+/**
+ * Created by urvi on 10/28/2017.
+ */
 
-public class meiAdapter extends RecyclerView.Adapter<meiAdapter.MyViewHolder> {
-    public List<recycler_list> urvi;;
+public class meiAdapter2 extends RecyclerView.Adapter<meiAdapter2.MyViewHolder> {
+    public List<recycler_list2> urvi;;
 
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public meiAdapter2.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_row, parent, false);
 
-        return new MyViewHolder(itemView);
+        return new meiAdapter2.MyViewHolder(itemView);
     }
 
+
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
-        recycler_list movie = urvi.get(position);
-       holder.name.setText(movie.getLeft());
-       holder.myname.setText(movie.getRight());
+    public void onBindViewHolder(meiAdapter2.MyViewHolder holder, int position) {
+        recycler_list2 movie = urvi.get(position);
+        holder.name.setText(movie.getLeft());
+        holder.myname.setText(movie.getRight());
 
     }
 
@@ -45,9 +49,10 @@ public class meiAdapter extends RecyclerView.Adapter<meiAdapter.MyViewHolder> {
             myname=(TextView)itemView.findViewById(R.id.myname);
         }
     }
-    public meiAdapter(List<recycler_list> moviesList) {
+    public meiAdapter2(List<recycler_list2> moviesList) {
         this.urvi = moviesList;
     }
 
 
 }
+

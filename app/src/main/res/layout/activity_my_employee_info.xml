@@ -4,6 +4,7 @@
     android:id="@+id/activity_my_employee_info"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context="com.geeconsystems.globalhr.UI.My_employee_info">
     <include
         android:id="@+id/t"
@@ -58,6 +59,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="#d3d3d3"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/lhb"
         >
         <ScrollView
@@ -71,107 +74,234 @@
                 android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/spinnershape"
                     >
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:padding="0dp"
-                        android:background="#ff7f00"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginStart="2dp"
                         android:src="@drawable/id"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="3dp"
+                        />
+                    <Spinner
+                        android:id="@+id/employee"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:dropDownWidth="wrap_content"
+                        android:spinnerMode="dialog"
+                        android:backgroundTint="#ff7f00"
+
                         />
 
-                    <Spinner
-                        android:layout_marginTop="10dp"
-                        android:id="@+id/employeename"
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/saldetailstextviewl"
+                    >
+
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:dropDownWidth="wrap_content"
-                        android:spinnerMode="dropdown"
+                        android:src="@drawable/emplyee"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="3dp"
+                        />
+                    <EditText
+                        android:id="@+id/firstname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="First Name"
+                        android:padding="5dp"
+                        android:background="@drawable/saldetailstextviewr"
                         android:layout_weight="1"
                         />
 
                 </LinearLayout>
-                <EditText
-                    android:id="@+id/firstname"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Nagendra"
-                    android:textColorHint="#000000"
-                    android:drawableStart="@drawable/emplyee"
-                    />
 
-                <EditText
-                    android:id="@+id/middlename"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="kanhiayalal"
-                    android:textColorHint="#000000"
-                    android:drawableStart="@drawable/emplyee"
-                    />
-                <EditText
-                    android:id="@+id/lastname"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Mishra"
-                    android:textColorHint="#000000"
-                    android:drawableStart="@drawable/emplyee"
-                    />
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/saldetailstextviewl"
+                    >
 
-                <EditText
-                    android:id="@+id/call"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/emplyee"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="3dp"
+                        />
+                    <EditText
+                        android:id="@+id/MiddleName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Middle Name"
+                        android:padding="5dp"
+                        android:background="@drawable/saldetailstextviewr"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="number"
-                    android:hint="8286824995"
-                    android:textColorHint="#000000"
-                    android:drawableStart="@drawable/call"
-                    />
-                <EditText
-                    android:id="@+id/mail"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/saldetailstextviewl"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/emplyee"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="3dp"
+                        />
+                    <EditText
+                        android:id="@+id/lastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Last Name"
+                        android:padding="5dp"
+                        android:background="@drawable/saldetailstextviewr"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textEmailAddress"
-                    android:hint="nagendra.mishra@geeconsystems.com"
-                    android:textColorHint="#000000"
-                    android:drawableStart="@drawable/mail"
-                    />
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/saldetailstextviewl"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/phone"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="3dp"
+                        />
+                    <EditText
+                        android:id="@+id/phoneno"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Phone Number"
+                        android:inputType="phone"
+                        android:padding="5dp"
+                        android:background="@drawable/saldetailstextviewr"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/saldetailstextviewl"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/email"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="3dp"
+                        />
+                    <EditText
+                        android:id="@+id/Email"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:hint="Email Address"
+                        android:padding="5dp"
+                        android:background="@drawable/saldetailstextviewr"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:id="@+id/lhs1"
-                    android:layout_marginTop="10dp"
+                    android:id="@+id/lhrb"
                     >
-
-                    <Spinner
-                        android:id="@+id/birthdate"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:backgroundTint="#ff7f00"
-                        android:spinnerMode="dropdown"
+                        android:orientation="horizontal"
                         android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        />
-                    <Spinner
-                        android:id="@+id/gender"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_weight="1"
-                        android:spinnerMode="dropdown"
-                        android:backgroundTint="#ff7f00"
+                        android:background="@drawable/spinnershape"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/birthdate"
+                            android:background="@drawable/leftcurvespinner"
+                            android:padding="3dp"
+                            />
+                        <EditText
+                            android:id="@+id/bdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="none"
+                            android:hint="birth date"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:background="@drawable/saldetailstextviewr"
+                            android:paddingStart="15dp"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginEnd="5dp"
-                        />
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinnershape"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/gender"
+                            android:background="@drawable/leftcurvespinner"
+                            android:padding="3dp"
+                            />
+                        <Spinner
+                            android:id="@+id/gender"
+                            android:spinnerMode="dialog"
+                            android:backgroundTint="#ff7f00"
+                            android:dropDownWidth="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            />
 
 
+                    </LinearLayout>
                 </LinearLayout>
 
 
@@ -179,31 +309,68 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:id="@+id/lhs2"
-                    android:layout_marginTop="10dp"
+                    android:id="@+id/lhrb"
                     >
-
-                    <Spinner
-                        android:id="@+id/relationshipstatus"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:backgroundTint="#ff7f00"
-                        android:spinnerMode="dropdown"
+                        android:orientation="horizontal"
                         android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        />
-                    <Spinner
-                        android:id="@+id/general"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_weight="1"
-                        android:spinnerMode="dropdown"
-                        android:backgroundTint="#ff7f00"
+                        android:background="@drawable/spinnershape"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/marritalstatus"
+                            android:background="@drawable/leftcurvespinner"
+                            android:padding="3dp"
+                            />
+                        <Spinner
+                            android:id="@+id/maritialstatus"
+                            android:spinnerMode="dialog"
+                            android:backgroundTint="#ff7f00"
+                            android:dropDownWidth="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginEnd="5dp"
-                        />
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinnershape"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cast"
+                            android:background="@drawable/leftcurvespinner"
+                            android:padding="3dp"
+                            />
+                        <Spinner
+                            android:id="@+id/Caste"
+                            android:spinnerMode="dialog"
+                            android:backgroundTint="#ff7f00"
+                            android:dropDownWidth="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            />
 
 
+                    </LinearLayout>
                 </LinearLayout>
 
 
@@ -211,61 +378,150 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:id="@+id/lhs3"
-                    android:layout_marginTop="10dp"
+                    android:id="@+id/lhrb"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinnershape"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/race"
+                            android:background="@drawable/leftcurvespinner"
+                            android:padding="3dp"
+                            />
+                        <Spinner
+                            android:id="@+id/nationality"
+                            android:spinnerMode="dialog"
+                            android:backgroundTint="#ff7f00"
+                            android:dropDownWidth="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinnershape"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/bloodgroup"
+                            android:background="@drawable/leftcurvespinner"
+                            android:padding="3dp"
+                            />
+                        <Spinner
+                            android:id="@+id/bloodgroup"
+                            android:spinnerMode="dialog"
+                            android:backgroundTint="#ff7f00"
+                            android:dropDownWidth="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/saldetailstextviewl"
                     >
 
-                    <Spinner
-                        android:id="@+id/nationality"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:backgroundTint="#ff7f00"
-                        android:spinnerMode="dropdown"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/panno"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="3dp"
                         />
-                    <Spinner
-                        android:id="@+id/bloodgroup"
-                        android:layout_width="0dp"
+                    <EditText
+                        android:id="@+id/Panno"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:hint="Pan Number"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:background="@drawable/saldetailstextviewr"
                         android:layout_weight="1"
-                        android:spinnerMode="dropdown"
-                        android:backgroundTint="#ff7f00"
-                        android:layout_marginEnd="5dp"
                         />
-
 
                 </LinearLayout>
 
-                <EditText
-                    android:id="@+id/pannumber"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="numberSigned"
-                    android:hint="(pannumber)"
-                    android:textColorHint="#000000"
-                    android:drawableStart="@drawable/pan"
-                    />
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/saldetailstextviewl"
+                    >
 
-                <EditText
-                    android:id="@+id/dln"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/drivinglicense"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="3dp"
+                        />
+                    <EditText
+                        android:id="@+id/Drivinglicense"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Driving License Number"
+                        android:padding="5dp"
+                        android:background="@drawable/saldetailstextviewr"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="number"
-                    android:hint="driving license number"
-                    android:textColorHint="#000000"
-                    android:drawableStart="@drawable/driving"
-                    />
-                <EditText
-                    android:id="@+id/licenseExpirydate"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="textEmailAddress"
-                    android:hint="license Expiry Date"
-                    android:textColorHint="#000000"
-                    android:drawableStart="@drawable/date"
-                    />
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/saldetailstextviewl"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/datew"
+                        android:background="@drawable/leftcurvespinner"
+                        android:padding="3dp"
+                        />
+                    <EditText
+                        android:id="@+id/LicenseExpiryDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="License Expiry Date"
+                        android:padding="5dp"
+                        android:background="@drawable/saldetailstextviewr"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
 
 
 
@@ -276,6 +532,7 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
                     >
 
                     <Button
@@ -284,6 +541,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="save"
+                        android:textSize="20sp"
+                        android:fontFamily="serif"
                         android:textColor="#ffffff"
                         android:background="#1a1"
                         android:layout_marginStart="5dp"
@@ -295,6 +554,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="cancel"
+                        android:textSize="20sp"
+                        android:fontFamily="serif"
                         android:textColor="#ffffff"
                         android:background="#9e9e9e"
                         android:layout_marginEnd="5dp"

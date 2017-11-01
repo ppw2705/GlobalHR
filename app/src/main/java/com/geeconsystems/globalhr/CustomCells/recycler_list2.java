@@ -1,9 +1,12 @@
 package com.geeconsystems.globalhr.CustomCells;
 
+/**
+ * Created by urvi on 10/28/2017.
+ */
 
-public class recycler_list {
-String left;
-    String right;
+public class recycler_list2 {
+    private String left;
+   private String right;
 
     public String getLeft() {
         return left;
@@ -21,10 +24,9 @@ String left;
         this.right = right;
     }
 
-    public recycler_list(String left, String right) {
+    public recycler_list2(String left, String right) {
         this.left = left;
         this.right = right;
     }
-
 
 }

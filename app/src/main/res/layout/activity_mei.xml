@@ -4,16 +4,41 @@
     android:id="@+id/activity_mei"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#d3d3d3"
     tools:context="com.geeconsystems.globalhr.UI.mei">
+
 
     <include
         android:id="@+id/tulbar"
         layout="@layout/toolbar"/>
 
+
+    <View
+        android:id="@+id/orline"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/tulbar"
+        android:layout_marginTop="5dp"
+        android:background="#ff7f00"
+        />
+
+    <View
+        android:id="@+id/whiteline"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/orline"
+        android:background="#ffffff"
+        android:layout_marginBottom="2dp"
+        />
+<ScrollView
+    android:id="@+id/sc1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/whiteline"
+    >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tulbar"
         >
 
 
@@ -21,7 +46,7 @@
             android:id="@+id/label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="     Personal Details"
+            android:text=" Personal Details"
             android:textSize="18sp"
             android:background="#ff7f00"
             android:textColor="@color/white"
@@ -34,9 +59,8 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/r1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/label"
-            android:layout_marginBottom="315dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             />
@@ -45,11 +69,12 @@
             android:id="@+id/label2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
+            android:layout_below="@+id/r1"
             android:background="#ff7f00"
-            android:text="Job Detail"
+            android:text=" Job Detail"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:padding="10dp"
@@ -57,10 +82,9 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/r2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_below="@+id/label2"
-            android:layout_marginBottom="100dp"
             android:layout_marginEnd="5dp"
             />
 
@@ -70,15 +94,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Edit"
-            android:textSize="20sp"
+            android:textSize="16sp"
+            android:fontFamily="serif"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
             android:textAllCaps="false"
             android:textColor="#ffffff"
             android:background="#1a1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginStart="5dp"
-            android:paddingStart="60dp"
-            android:paddingEnd="60dp"
-            android:layout_below="@+id/label2"
-            android:layout_marginTop="200dp"
+            android:layout_below="@+id/r2"
             android:layout_marginEnd="5dp"
             />
 
@@ -89,5 +115,6 @@
 
 
     </RelativeLayout>
+</ScrollView>
 
 </RelativeLayout>

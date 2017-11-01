@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/h"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff7f00"
+        android:textStyle="bold"
+        android:text="EMP NAME:LEXUSER CHINO"
+        android:textColor="#ffffff"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="20dp"
+        android:layout_marginTop="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/h"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:id="@+id/h1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:text="MANAGER"
+            android:textStyle="bold"
+            android:textColor="#808080"
+            />
+        <TextView
+            android:id="@+id/h11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:textStyle="bold"
+            android:text="LEXUSER"
+            android:textColor="#000000"
+            />
+
+    </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="#b0b0b0"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:id="@+id/h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:textStyle="bold"
+                android:text="MANAGER TYPE"
+                android:textColor="#808080"
+                />
+            <TextView
+                android:id="@+id/h22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:textStyle="bold"
+                android:text="PROJECT MANAGER"
+                android:textColor="#000000"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="#b0b0b0"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:id="@+id/h3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:textStyle="bold"
+                android:text="REPORTING MODE"
+                android:textColor="#808080"
+                />
+            <TextView
+                android:id="@+id/h33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:textStyle="bold"
+                android:text="DIRECT"
+                android:textColor="#000000"
+                />
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+</LinearLayout>
+</RelativeLayout>

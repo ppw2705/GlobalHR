@@ -2,67 +2,61 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         >
+        <View
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:background="#ff7f00"
+            />
+
         <TextView
             android:id="@+id/name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:layout_weight="1"
-            android:layout_marginStart="11dp"
-            android:paddingBottom="11dp"
-            android:layout_marginEnd="1dp"
+            android:textColor="#808080"
+            android:textSize="16sp"
+            android:layout_weight="2"
+            android:padding="13dp"
             />
+        <View
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:layout_weight="0"
+            android:background="#ff7f00"
+            />
+
         <TextView
             android:id="@+id/myname"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:layout_weight="1"
-            android:layout_marginStart="1dp"
-            android:layout_marginEnd="12dp"
-            android:paddingBottom="11dp"
+            android:layout_weight="2"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:padding="13dp"
+            />
+        <View
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:background="#ff7f00"
             />
 
 
 
     </LinearLayout>
-    <View
-        android:layout_width="1dp"
-        android:layout_height="30dp"
-        android:background="#ff7f00"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="190dp"
-        />
-    <View
-        android:layout_width="1dp"
-        android:layout_height="30dp"
-        android:background="#ff7f00"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        />
 
 
-    <View
-        android:layout_width="1dp"
-        android:layout_height="30dp"
-        android:background="#ff7f00"
-        android:layout_marginStart="370dp"
-        android:layout_marginTop="10dp"
-        />
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:background="#ff7f00"
-        android:layout_marginEnd="11dp"
-        android:layout_marginStart="11dp"
         android:layout_marginTop="40dp"
         />
 
