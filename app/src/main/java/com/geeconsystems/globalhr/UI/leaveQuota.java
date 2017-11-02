@@ -10,61 +10,55 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.geeconsystems.globalhr.Adapters.emp_reportingAdapter;
-import com.geeconsystems.globalhr.CustomCells.emp_reporting;
+import com.geeconsystems.globalhr.Adapters.leavequota;
+import com.geeconsystems.globalhr.CustomCells.leavequotacc;
 import com.geeconsystems.globalhr.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class leaveQuota extends AppCompatActivity {
-    private List<emp_reporting> recycle_List1 = new ArrayList<>();
+    private List<leavequotacc> recycle_List = new ArrayList<>();
     Toolbar toolbar;
-    private RecyclerView recyclerView;
-    private emp_reportingAdapter mAdapter;
+    private RecyclerView recyclerview;
+    private leavequota myAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leave_quota);
-        recyclerView = (RecyclerView) findViewById(R.id.rv);
+        recyclerview = (RecyclerView) findViewById(R.id.recyclerView);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("EMPLOYEE REPORTING");
+        getSupportActionBar().setTitle("LEAVE QUOTA");
         toolbar.setNavigationIcon(R.drawable.back);
         toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
 
-        mAdapter = new emp_reportingAdapter(recycle_List1);
+        myAdapter = new leavequota(recycle_List);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(mAdapter);
+        recyclerview.setLayoutManager(mLayoutManager);
+        recyclerview.setItemAnimator(new DefaultItemAnimator());
+        recyclerview.setAdapter(myAdapter);
 
-        prepareMovieData();
+        prepareMovieData1();
 
 
     }
 
-    private void prepareMovieData() {
-        emp_reporting movie = new emp_reporting("EMP NAME:LEXUSER CHINO", "MANAGER", "LEXUSER", "MANAGER TYPE", "PROJECT MANAGER", "REPORTING MODE", "DIRECT");
-        recycle_List1.add(movie);
-        movie = new emp_reporting("EMP NAME:LEXUSER CHINO", "MANAGER", "LEXUSER", "MANAGER TYPE", "PROJECT MANAGER", "REPORTING MODE", "DIRECT");
-        recycle_List1.add(movie);
-        movie = new emp_reporting("EMP NAME:LEXUSER CHINO", "MANAGER", "LEXUSER", "MANAGER TYPE", "PROJECT MANAGER", "REPORTING MODE", "DIRECT");
-        recycle_List1.add(movie);
-        movie = new emp_reporting("EMP NAME:LEXUSER CHINO", "MANAGER", "LEXUSER", "MANAGER TYPE", "PROJECT MANAGER", "REPORTING MODE", "DIRECT");
-        recycle_List1.add(movie);
-        movie = new emp_reporting("EMP NAME:LEXUSER CHINO", "MANAGER", "LEXUSER", "MANAGER TYPE", "PROJECT MANAGER", "REPORTING MODE", "DIRECT");
-        recycle_List1.add(movie);
-        movie = new emp_reporting("EMP NAME:LEXUSER CHINO", "MANAGER", "LEXUSER", "MANAGER TYPE", "PROJECT MANAGER", "REPORTING MODE", "DIRECT");
-        recycle_List1.add(movie);
-        movie = new emp_reporting("EMP NAME:LEXUSER CHINO", "MANAGER", "LEXUSER", "MANAGER TYPE", "PROJECT MANAGER", "REPORTING MODE", "DIRECT");
-        recycle_List1.add(movie);
-        movie = new emp_reporting("EMP NAME:LEXUSER CHINO", "MANAGER", "LEXUSER", "MANAGER TYPE", "PROJECT MANAGER", "REPORTING MODE", "DIRECT");
-        recycle_List1.add(movie);
+    private void prepareMovieData1() {
+        leavequotacc leavelist = new leavequotacc("JOHN DAVE","CASUAL LEAVE","START DATE/END DATE","8-11-1995-8-11-1996","ALLOCATED DAYS","3.00","TAKEN","3.00","BALANCE","3.00");
+        recycle_List.add(leavelist);
+        leavelist = new leavequotacc("JOHN DAVE","CASUAL LEAVE","START DATE/END DATE","8-11-1995-8-11-1996","ALLOCATED DAYS","3.00","TAKEN","3.00","BALANCE","3.00");
+        recycle_List.add(leavelist);
+        leavelist = new leavequotacc("JOHN DAVE","CASUAL LEAVE","START DATE/END DATE","8-11-1995-8-11-1996","ALLOCATED DAYS","3.00","TAKEN","3.00","BALANCE","3.00");
+        recycle_List.add(leavelist);
+        leavelist = new leavequotacc("JOHN DAVE","CASUAL LEAVE","START DATE/END DATE","8-11-1995-8-11-1996","ALLOCATED DAYS","3.00","TAKEN","3.00","BALANCE","3.00");
+        recycle_List.add(leavelist);
+        leavelist = new leavequotacc("JOHN DAVE","CASUAL LEAVE","START DATE/END DATE","8-11-1995-8-11-1996","ALLOCATED DAYS","3.00","TAKEN","3.00","BALANCE","3.00");
+        recycle_List.add(leavelist);
 
 
-        mAdapter.notifyDataSetChanged();
+        myAdapter.notifyDataSetChanged();
     }
 
     @Override

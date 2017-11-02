@@ -12,7 +12,7 @@ import com.geeconsystems.globalhr.R;
 import java.util.List;
 
 public class emp_reportingAdapter extends RecyclerView.Adapter<emp_reportingAdapter.MyViewHolder> {
-public List<emp_reporting> urvi;;
+public List<emp_reporting> urvi;
 
 @Override
 public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

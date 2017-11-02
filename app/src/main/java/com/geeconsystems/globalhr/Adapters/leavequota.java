@@ -12,7 +12,7 @@ import com.geeconsystems.globalhr.R;
 import java.util.List;
 
 public class leavequota extends RecyclerView.Adapter<leavequota.MyViewHolder> {
-    public List<leavequotacc> urvi;;
+    public List<leavequotacc> urvi;
 
     @Override
     public leavequota.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
