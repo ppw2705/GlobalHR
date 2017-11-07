@@ -1,8 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:background="#ffffff"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:id="@+id/one"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    >
+<TextView
+    android:id="@+id/quertyadmin"
+    android:text="QUERTYADMIN"
+    android:textColor="@color/black"
+    android:paddingBottom="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
 
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Approved"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
 
+        />
+</LinearLayout>
+    <View
+        android:id="@+id/onel"
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:background="#d3d3d3"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignEnd="@+id/one"
+        />
+    <LinearLayout
+        android:id="@+id/two"
+        android:layout_alignStart="@+id/onel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        >
+        <TextView
+            android:id="@+id/tsperiod"
+            android:text="TIMESHEET PERIOD"
+            android:textColor="@color/year"
+            android:paddingBottom="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/ts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TIMESHEET 2015-Q5"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+
+            />
+    </LinearLayout>
+    <View
+        android:id="@+id/two1"
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:background="#d3d3d3"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignEnd="@+id/two"
+        />
+
+    <LinearLayout
+        android:id="@+id/three"
+        android:layout_alignStart="@+id/two1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        >
+        <TextView
+            android:id="@+id/startenddate"
+            android:text="START DATE/END DATE"
+            android:textColor="@color/year"
+            android:textSize="12dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/dt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2015-06-11/2015-05-03"
+            android:textSize="12dp"
+            android:textColor="@color/black"
+
+            />
+    </LinearLayout>
 
 </RelativeLayout>

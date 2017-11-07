@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff7f00"
+    tools:context="com.geeconsystems.globalhr.UI.timeSheet">
+
+    <include
+        android:id="@+id/tbr"
+        layout="@layout/toolbar"/>
+    <LinearLayout
+        android:id="@+id/searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tbr"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/recyclerbg"
+        android:padding="15dp"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/search"
+            android:layout_weight="1"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="search"
+            android:focusable="false"
+            android:inputType="none"
+            android:clickable="true"
+            android:fontFamily="serif"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/btnsearch"
+            android:textSize="18sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+
+            />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchbar"
+        android:background="#ffffff"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+
+        />
+
+
+</RelativeLayout>

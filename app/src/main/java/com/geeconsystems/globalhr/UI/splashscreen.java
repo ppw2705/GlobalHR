@@ -10,34 +10,41 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.geeconsystems.globalhr.R;
+import com.geeconsystems.globalhr.utilities.loginsession;
 
 import static android.R.attr.angle;
 import static android.R.attr.pivotX;
 import static android.R.attr.pivotY;
 
-public class splashscreen extends AppCompatActivity
-{
-    private final static int splashtimmeout=3000;
+public class splashscreen extends AppCompatActivity {
+    private final static int splashtimmeout = 3000;
+    loginsession session;
+    ImageView i;
 
     @Override
-        protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
-        ImageView i=(ImageView)findViewById(R.id.logo);
+        i = (ImageView) findViewById(R.id.logo);
 
+        session = new loginsession(this);
+        if (session.isUserLoggedIn() == true) {
 
-         Animation animation= AnimationUtils.loadAnimation(this,R.anim.bounce);
-        i.startAnimation(animation);
+            startActivity(new Intent(splashscreen.this, Attendance.class));
+            finish();
 
-        new Handler().postDelayed(new Runnable()
-        {
-            @Override
-            public void run()
+        } else
             {
-                startActivity(new Intent(splashscreen.this,loginscreen.class));
-                finish();
-            }
-        },splashtimmeout);
+            Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
+            i.startAnimation(animation);
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    startActivity(new Intent(splashscreen.this, loginscreen.class));
+                    finish();
+                }
+            }, splashtimmeout);
+        }
     }
 }

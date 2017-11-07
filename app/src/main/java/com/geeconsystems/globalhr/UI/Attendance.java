@@ -10,17 +10,23 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.geeconsystems.globalhr.R;
+import com.geeconsystems.globalhr.utilities.loginsession;
+
+import java.util.HashMap;
 
 public class Attendance extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     Toolbar toolbar;
     ImageView b1,b2,b3,b4;
     NavigationView navigationView;
     DrawerLayout drawer;
+    loginsession session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +35,12 @@ public class Attendance extends AppCompatActivity implements NavigationView.OnNa
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("ATTENDANCE");
         toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
+        session=new loginsession(getApplicationContext());
+        HashMap<String,String> user=session.getuserdetails();
+        String name=user.get(loginsession.key_name);
+       // String pass=user.get(usersessionmanager.key_pass);
+        Toast.makeText(this,"you are logged in as::"+name,Toast.LENGTH_LONG).show();
+
         drawer=(DrawerLayout)findViewById(R.id.drawer);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -81,6 +93,8 @@ public class Attendance extends AppCompatActivity implements NavigationView.OnNa
         } else {
             super.onBackPressed();
         }
+        Attendance.this.moveTaskToBack(true);
+
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -103,4 +117,24 @@ public class Attendance extends AppCompatActivity implements NavigationView.OnNa
 
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+
+        getMenuInflater().inflate(R.menu.logout, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(final MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.menu_logout:
+                session.logoutuser();
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
 }

@@ -37,6 +37,7 @@
             android:orientation="vertical"
             android:layout_below="@+id/t1">
 
+
             <RelativeLayout
                 android:id="@+id/lh1"
                 android:layout_width="match_parent"
@@ -66,7 +67,7 @@
                     app:srcCompat="@drawable/four"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentTop="true"></ImageView>
+                    android:layout_alignParentTop="true"/>
 
                 <TextView
                     android:id="@+id/textView4"
