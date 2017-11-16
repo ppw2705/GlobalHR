@@ -11,8 +11,8 @@ import android.view.MenuItem;
 
 import com.geeconsystems.globalhr.Adapters.meiAdapter;
 import com.geeconsystems.globalhr.Adapters.meiAdapter2;
-import com.geeconsystems.globalhr.CustomCells.recycler_list;
-import com.geeconsystems.globalhr.CustomCells.recycler_list2;
+import com.geeconsystems.globalhr.model.recycler_list;
+import com.geeconsystems.globalhr.model.recycler_list2;
 import com.geeconsystems.globalhr.R;
 
 import java.util.ArrayList;

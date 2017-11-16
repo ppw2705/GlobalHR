@@ -1,4 +1,4 @@
-package com.geeconsystems.globalhr.CustomCells;
+package com.geeconsystems.globalhr.model;
 
 /**
  * Created by urvi on 10/28/2017.

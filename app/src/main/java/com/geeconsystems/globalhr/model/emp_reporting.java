@@ -1,4 +1,4 @@
-package com.geeconsystems.globalhr.CustomCells;
+package com.geeconsystems.globalhr.model;
 
 public class emp_reporting {
     private String h,h1,h11,h2,h22,h3,h33;

@@ -17,7 +17,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.geeconsystems.globalhr.Asynctask.SendPostRequest;
+import com.geeconsystems.globalhr.Interfaces.SendInterface;
 import com.geeconsystems.globalhr.R;
+import com.geeconsystems.globalhr.model.login;
 import com.geeconsystems.globalhr.utilities.loginsession;
 
 import org.apache.http.HttpResponse;
@@ -59,12 +62,15 @@ public class loginscreen extends AppCompatActivity {
     EditText user, pass;
     String u, p;
     loginsession session;
+    login lgn;
+    SendInterface sendInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginscreen);
         button = (Button) findViewById(R.id.login);
+
         session=new loginsession(this);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,28 +83,24 @@ public class loginscreen extends AppCompatActivity {
 
                 if (u.length() > 0 && p.length() > 0) {
                     new SendPostRequest().execute();
-                  //  Toast.makeText(getApplicationContext(),response, Toast.LENGTH_SHORT).show();
+                    lgn=new login(u,p,"login");
 
-                   /* if(r =="{\"OA_ID\":\"154\",\"OA_BRAND_ID\":\"152\",\"userid\":\"269\",\"punch_status\":2,\"message\":\"LOGIN SUCCESSFUL\"}") {
-                        session.createuserloginsession(u, p);
-                        Intent intent1 = new Intent(loginscreen.this, Attendance.class);
-                        intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent1);
-                        finish();
-                    }
-                    else if (r == "{\"message\":\"LOGIN UNSUCCESSFUL\"}"){
-                        Toast.makeText(loginscreen.this,"Login Unsuccessfull",Toast.LENGTH_LONG).show();
-                    }
-*/
-                } else {
-                    Toast.makeText(getApplicationContext(), "please fill the login details", Toast.LENGTH_SHORT).show();
+                    //  Toast.makeText(getApplicationContext(),response, Toast.LENGTH_SHORT).show();
 
+
+                     //   session.createuserloginsession(u, p);
+                       // Intent intent1 = new Intent(loginscreen.this, Attendance.class);
+                        //intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        //intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                       // startActivity(intent1);
+                       // finish();
+                        //Toast.makeText(loginscreen.this,"Login successfull",Toast.LENGTH_LONG).show();
+                    }
                 }
-            }
-        });
+    });
+}
 
-    }
+
 
     @Override
     public void onBackPressed() {
@@ -107,50 +109,5 @@ public class loginscreen extends AppCompatActivity {
 
     }
 
-    public class SendPostRequest extends AsyncTask<String, Void, String> {
-
-       protected void onPreExecute() {
-        }
-
-        protected String doInBackground(String... arg0) {
-            RequestQueue MyRequestQueue = Volley.newRequestQueue(loginscreen.this);
-
-            String url = "http://www.mydevsystems.com/dev/gap_v2/rest/restexample/RestController.php";
-            StringRequest MyStringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    Log.e("TAG", "onResponse: " + response);
-                    //This code is executed if the server responds, whether or not the response contains data.
-                    //The String 'response' contains the server's response.
-                    r=response;
-                }
-            }, new Response.ErrorListener() { //Create an error listener to handle errors appropriately.
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Log.e("TAG", "onResponse: " + error.toString());
-                    //This code is executed if there is an error.
-                }
-            }) {
-                protected Map<String, String> getParams() {
-                    Map<String, String> MyData = new HashMap<String, String>();
-                    MyData.put("view", "login"); //Add the data you'd like to send to the server.
-                    MyData.put("username", u);
-                    MyData.put("password", p);
-                    return MyData;
-                }
-            };
-
-            MyRequestQueue.add(MyStringRequest);
-            return response;
-        }
-
-
-        @Override
-        protected void onPostExecute(String result) {
-            Toast.makeText(getApplicationContext(), response,Toast.LENGTH_LONG).show();
-          //  startActivity(new Intent(loginscreen.this,Attendance.class));
-        }
-
-    }
 
 }

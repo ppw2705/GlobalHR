@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.geeconsystems.globalhr.CustomCells.recycler_list2;
+import com.geeconsystems.globalhr.model.recycler_list2;
 import com.geeconsystems.globalhr.R;
 
 import java.util.List;

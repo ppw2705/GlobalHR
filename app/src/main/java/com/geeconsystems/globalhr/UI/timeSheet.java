@@ -11,10 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.geeconsystems.globalhr.Adapters.leavequota;
 import com.geeconsystems.globalhr.Adapters.timesheetAdapter;
-import com.geeconsystems.globalhr.CustomCells.leavequotacc;
-import com.geeconsystems.globalhr.CustomCells.timesheet;
+import com.geeconsystems.globalhr.model.timesheet;
 import com.geeconsystems.globalhr.R;
 
 import java.util.ArrayList;

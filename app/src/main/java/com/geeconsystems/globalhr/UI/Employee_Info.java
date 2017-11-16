@@ -10,9 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.geeconsystems.globalhr.Adapters.employeeAdapter;
-import com.geeconsystems.globalhr.CustomCells.emp_info;
-import com.geeconsystems.globalhr.CustomCells.recycler_list;
-import com.geeconsystems.globalhr.CustomCells.recycler_list2;
+import com.geeconsystems.globalhr.model.emp_info;
 import com.geeconsystems.globalhr.R;
 
 import java.util.ArrayList;

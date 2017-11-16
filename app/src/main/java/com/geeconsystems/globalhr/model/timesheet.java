@@ -1,4 +1,4 @@
-package com.geeconsystems.globalhr.CustomCells;
+package com.geeconsystems.globalhr.model;
 
 public class timesheet  {
     private String Quertyadmin,status,tsperiod,timesheet,sded,dte;

@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.geeconsystems.globalhr.Adapters.leavequota;
-import com.geeconsystems.globalhr.CustomCells.leavequotacc;
+import com.geeconsystems.globalhr.model.leavequotacc;
 import com.geeconsystems.globalhr.R;
 
 import java.util.ArrayList;

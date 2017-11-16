@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.geeconsystems.globalhr.CustomCells.timesheet;
+import com.geeconsystems.globalhr.model.timesheet;
 import com.geeconsystems.globalhr.R;
 
 import java.util.List;

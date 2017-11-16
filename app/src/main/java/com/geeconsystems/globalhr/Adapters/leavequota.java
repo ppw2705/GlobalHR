@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.geeconsystems.globalhr.CustomCells.leavequotacc;
+import com.geeconsystems.globalhr.model.leavequotacc;
 import com.geeconsystems.globalhr.R;
 
 import java.util.List;

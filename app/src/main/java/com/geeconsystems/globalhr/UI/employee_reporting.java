@@ -11,10 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.geeconsystems.globalhr.Adapters.emp_reportingAdapter;
-import com.geeconsystems.globalhr.Adapters.meiAdapter;
-import com.geeconsystems.globalhr.CustomCells.emp_reporting;
-import com.geeconsystems.globalhr.CustomCells.recycler_list;
-import com.geeconsystems.globalhr.CustomCells.recycler_list2;
+import com.geeconsystems.globalhr.model.emp_reporting;
 import com.geeconsystems.globalhr.R;
 
 import java.util.ArrayList;
